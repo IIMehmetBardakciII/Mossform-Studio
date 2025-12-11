@@ -1,15 +1,61 @@
 @import "tailwindcss";
 
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-display: "Bricolage Grotesque", sans-serif;
+  --font-body: "Montserrat", sans-serif;
+
+  --color-black: "#0B0B0B";
+  --color-white: "#FAFAFA";
+  --color-gray: "ABABAB";
+  --color-linegray: "D9D9D9";
+  --color-accent: "97EA8C";
+
+  --spacing-gapSectionDesktop:106px;
+  --spacing-gapSectionMobile:88px;
 }
 
 html,
 body {
-  @apply bg-white dark:bg-gray-950;
+  @apply bg-white;
+}
 
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
-  }
+
+@utility container{
+@apply max-w-[1536px] mx-auto px-6
+}
+
+
+/* Typography */
+/** Display Fonts */
+@utility display-xl {
+  @apply text-[clamp(40px,calc(40px+(80-40)*((100vw-320px)/(1536-320))),80px)] font-display font-semibold leading-none;
+}
+@utility display-l {
+  @apply text-[clamp(36px,calc(36px+(48-36)*((100vw-320px)/(1536-320))),48px)] font-display font-semibold leading-none;
+}
+@utility display-m {
+  @apply text-[clamp(24px,calc(24px+(40-24)*((100vw-320px)/(1536-320))),40px)] font-display font-semibold leading-none;
+}
+@utility display-base {
+  @apply text-[24px] font-display font-medium leading-none;
+}
+@utility display-s {
+  @apply text-[clamp(12px,calc(12px+(16-12)*((100vw-320px)/(1536-320))),16px)] font-display font-semibold leading-none;
+}
+/** Body Fonts */
+@utility body-xl {
+  @apply text-[clamp(16px,calc(16px+(80-16)*((100vw-320px)/(1536-320))),80px)] font-body  sm:font-bold  font-semibold tracking-[-0.02em]  leading-none;
+}
+@utility body-l {
+  @apply text-[clamp(16px,calc(16px+(48-16)*((100vw-320px)/(1536-320))),48px)] font-body  font-medium sm:leading-[1.3] leading-[1.1];
+}
+@utility body-base {
+  @apply text-[clamp(16px,calc(16px+(24-16)*((100vw-320px)/(1536-320))),24px)] font-body  font-medium leading-[1.3];
+}
+@utility body-s {
+  @apply text-[clamp(12px,calc(12px+(16-12)*((100vw-320px)/(1536-320))),16px)] font-body  sm:font-medium font-semibold leading-[1.3];
+}
+/** Small Links */
+@utility body-s {
+  @apply text-[16px] font-body  sm:font-bold leading-none;
 }
