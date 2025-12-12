@@ -2,7 +2,7 @@ import Navbar from "../Navbar";
 
 const Hero = () => {
   return (
-    <div className="bg-black flex flex-col  relative w-screen  h-screen overflow-x-hidden">
+    <div className="bg-black flex flex-col  relative w-full  h-screen ">
       <Navbar variation="var1" />
 
       {/* Texts */}
