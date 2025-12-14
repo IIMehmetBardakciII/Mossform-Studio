@@ -55,7 +55,7 @@ body {
 }
 /** Small Links */
 @utility small-link {
-  @apply text-[16px] font-body  sm:font-bold leading-none;
+  @apply text-[16px] font-body font-medium  max-sm:font-bold leading-none;
 }
 
 /* Basic Text Animation */
@@ -113,4 +113,13 @@ body {
 /* Açık hali */
 .menu-overlay.open {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+
+/* Hero Introduction */
+.gap-first-pair{
+  @apply flex w-full gap-[clamp(16px,calc(16px+(272-16)*((100vw-320px)/(1536-320))),272px)] max-md:flex-col
+}
+.gap-second-pair{
+  @apply flex w-full gap-[clamp(16px,calc(16px+(80-16)*((100vw-320px)/(1536-320))),80px)] max-md:flex-col-reverse
 }
