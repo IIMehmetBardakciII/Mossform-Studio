@@ -3,7 +3,7 @@ import SmallLink from "../SmallLink";
 const Intro = () => {
   return (
     <section className="md:mt-gapSectionDesktop mt-gapSectionMobile container min-h-screen flex flex-col md:gap-[156px] gap-6">
-      <div className="gap-first-pair  ">
+      <div className="gap-first-pair">
         <div className="flex-2 md:aspect-482/368 aspect-272/208 max-w-[482px] ">
           <img
             src="/images/home/introImage1.webp"
@@ -32,7 +32,7 @@ const Intro = () => {
           </p>
           <SmallLink to="#" text="Learn More About Us" />
         </div>
-        <div className="flex-1 aspect-272/270 md:aspect-734/362">
+        <div className="flex-1 aspect-272/270 max-h-[362px] md:aspect-734/362">
           <img
             src="/images/home/introImage2.webp"
             alt="handShakeImage"
