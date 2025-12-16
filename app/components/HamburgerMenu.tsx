@@ -2,6 +2,7 @@ import { useState } from "react";
 import Button from "./Button";
 import { Link } from "react-router";
 import HoverTextAnimation from "./HoverTextAnimation";
+import useMediaQuery from "~/hooks/useMediaQuery";
 
 const links = [
   {
@@ -30,13 +31,16 @@ const HamburgerMenu = () => {
   const [currentImage, setCurrentImage] = useState<string | null>(
     links[0].image
   );
+  const isDesktop = useMediaQuery("(min-width:768px)");
 
   return (
     <>
       <div className="container" onClick={() => setIsOpen(true)}>
         <Button text="Menu" variant="var3" />
       </div>
-      <div className={`menu-overlay overflow-hidden pt-6 container ${isOpen ? "open" : ""}`}>
+      <div
+        className={`menu-overlay overflow-hidden pt-6 container ${isOpen ? "open" : ""}`}
+      >
         <div className="w-full flex justify-between">
           <Link to={"/"} className="display-m text-gray">
             Mossform
@@ -57,9 +61,15 @@ const HamburgerMenu = () => {
             <div className="display-xl  flex flex-col  ">
               {links.map((link) => (
                 <Link
-                  onClick={()=>setIsOpen(false)}
-                  onMouseEnter={()=>setCurrentImage(link.image)}
-                  onMouseLeave={()=>setCurrentImage(links[0].image)}
+                  onClick={() => setIsOpen(false)}
+                  onMouseEnter={
+                    isDesktop ? () => setCurrentImage(link.image) : undefined
+                  }
+                  onMouseLeave={
+                    isDesktop
+                      ? () => setCurrentImage(links[0].image)
+                      : undefined
+                  }
                   to={link.to}
                   key={link.to}
                   className="text-gray hover:text-white  w-fit textBigContainer"
@@ -97,7 +107,7 @@ const HamburgerMenu = () => {
               src={currentImage!}
               alt={currentImage!}
               className="w-full h-full opacity-70 object-contain  max-md:hidden"
-            />  
+            />
           </div>
         </div>
       </div>
