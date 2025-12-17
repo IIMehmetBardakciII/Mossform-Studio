@@ -9,6 +9,7 @@ import {
 export default [
   index("routes/home.tsx"),
 //   route("about", "./about.tsx"),
+  route(".well-known/*", "routes/.well-known.$.tsx"),
 
 //   layout("./auth/layout.tsx", [
 //     route("login", "./auth/login.tsx"),
