@@ -63,7 +63,7 @@ const Navbar = ({ variation }: NavbarProps) => {
 
       {/* Hamburger Menu */}
       <div className="md:hidden flex">
-        <HamburgerMenu />
+        <HamburgerMenu isSmall />
       </div>
     </nav>
   );

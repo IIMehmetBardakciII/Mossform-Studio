@@ -20,7 +20,7 @@ body {
 }
 
 @utility container {
-  @apply max-w-[1536px] mx-auto px-6 ;
+  @apply max-w-[1536px] mx-auto px-6;
 }
 
 /* Typography */
@@ -98,17 +98,14 @@ body {
 
 
 .menu-overlay {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
+  position: fixed; /* 🔥 instead of absolute */
+  inset: 0;
   background: black;
   z-index: 100;
-  /* Kapalı hali */
   clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   transition: clip-path 0.6s cubic-bezier(0.33, 1, 0.68, 1);
 }
+
 
 /* Açık hali */
 .menu-overlay.open {

@@ -3,15 +3,16 @@ import HoverTextAnimation from "./HoverTextAnimation";
 type ButtonProps = {
   variant: "var1" | "var2" | "var3";
   text: string;
+  isSmall?:boolean;
 };
 
 const text16px = "text-[16px] leading-none font-display font-medium";
 const buttonVariants = {
   var1: " text-white bg-black px-4 py-3 flex gap-2 items-center min-w-[179px]",
   var2: " text-black bg-white px-4 py-3 flex gap-2 items-center",
-  var3: "text-black bg-linegray px-2.5 py-2 flex gap-2 items-center",
+  var3: "text-black bg-linegray px-4 py-3 flex gap-2 items-center",
 } as const;
-const Button = ({ variant, text }: ButtonProps) => {
+const Button = ({ variant, text,isSmall }: ButtonProps) => {
   return (
     <button
       className={`cursor-pointer group textBigContainer rounded-full ${buttonVariants[variant]}`}
@@ -35,7 +36,7 @@ const Button = ({ variant, text }: ButtonProps) => {
 
       <HoverTextAnimation
         text={text}
-        className={`${variant === "var1" ? "display-base" : text16px}`}
+        className={`${isSmall ?  text16px: "display-base"}`}
       />
     </button>
   );
