@@ -1,3 +1,4 @@
+import ImageAnimation from "../ImageAnimation";
 import SmallLink from "../SmallLink";
 
 const Intro = () => {
@@ -5,11 +6,13 @@ const Intro = () => {
     <section className="md:mt-gapSectionDesktop mt-gapSectionMobile container min-h-screen flex flex-col md:gap-[156px] gap-6">
       <div className="gap-first-pair">
         <div className="flex-2 md:aspect-482/368 aspect-272/208 max-w-[482px] ">
-          <img
-            src="/images/home/introImage1.webp"
-            alt="familyImage"
-            className="flex-2 object-cover w-full h-full "
-          />
+          <ImageAnimation>
+            <img
+              src="/images/home/introImage1.webp"
+              alt="familyImage"
+              className="flex-2 object-cover w-full h-full "
+            />
+          </ImageAnimation>
         </div>
         <div className="flex flex-col gap-8 max-md:gap-2 flex-3 ">
           <h2 className="display-xl text-black">Reconnect With Nature</h2>
@@ -33,17 +36,19 @@ const Intro = () => {
           <SmallLink to="#" text="Learn More About Us" />
         </div>
         <div className="flex-1 aspect-272/270 max-h-[362px] md:aspect-734/362">
-          <img
-            src="/images/home/introImage2.webp"
-            alt="handShakeImage"
-            className="w-full h-full object-cover"
-            //* If Image file size bigger than 100px && (desktop size / mobile size) ratio 40%-50% use it srcset otherwise unnecessary.
-            // srcSet="/images/home/introImage2/desktop.webp 734w, /images/home/introImage2/mobile.webp 544w"
-            // sizes="
-            //   (max-width: 768px) 272px,
-            //   734px
-            // "
-          />
+          <ImageAnimation>
+            <img
+              src="/images/home/introImage2.webp"
+              alt="handShakeImage"
+              className="w-full h-full object-cover"
+              //* If Image file size bigger than 100px && (desktop size / mobile size) ratio 40%-50% use it srcset otherwise unnecessary.
+              // srcSet="/images/home/introImage2/desktop.webp 734w, /images/home/introImage2/mobile.webp 544w"
+              // sizes="
+              //   (max-width: 768px) 272px,
+              //   734px
+              // "
+            />
+          </ImageAnimation>
         </div>
       </div>
     </section>

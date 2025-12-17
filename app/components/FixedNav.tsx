@@ -42,7 +42,7 @@ const FixedNav = () => {
   return (
     <>
       <div className="fixed top-5 w-full container   z-30" ref={menuRef}>
-        <div className=" flex gap-4 w-full justify-end border border-red-600">
+        <div className=" flex gap-4 w-full justify-end">
           <div className="max-md:hidden">
             <Button text="Contact Us" variant="var1" />
           </div>
