@@ -36,6 +36,8 @@ const Hero = () => {
       <div className="absolute w-full h-full">
         <div className="w-full h-full bg-[#0B0B0B] opacity-20 absolute" />
         <img
+        loading="eager"
+        fetchPriority="high"
           src="images/projects/the-garden-pavilion/home.webp"
           alt="the-garden-pavilion"
           className="object-cover w-full h-full"
