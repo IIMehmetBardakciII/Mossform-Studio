@@ -3,7 +3,6 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useRef, useState } from "react";
 import Button from "./Button";
-import HamburgerMenu from "./HamburgerMenu";
 import OverlayMenu from "./OverlayMenu";
 
 gsap.registerPlugin(ScrollTrigger);

@@ -1,6 +1,6 @@
 import { Link, NavLink } from "react-router";
 import Button from "./Button";
-import HoverTextAnimation from "./HoverTextAnimation";
+import HoverTextAnimation from "../Animations/HoverTextAnimation";
 import HamburgerMenu from "./HamburgerMenu";
 
 type NavbarProps = {

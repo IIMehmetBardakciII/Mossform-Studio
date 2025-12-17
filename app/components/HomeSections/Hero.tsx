@@ -1,4 +1,4 @@
-import Navbar from "../Navbar";
+import Navbar from "../Utilities/Navbar";
 
 const Hero = () => {
   return (

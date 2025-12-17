@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import HoverTextAnimation from "./HoverTextAnimation";
+import HoverTextAnimation from "../Animations/HoverTextAnimation";
 import useMediaQuery from "~/hooks/useMediaQuery";
 import { useState } from "react";
 

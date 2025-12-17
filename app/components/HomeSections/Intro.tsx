@@ -1,5 +1,5 @@
-import ImageAnimation from "../ImageAnimation";
-import SmallLink from "../SmallLink";
+import ImageAnimation from "../Animations/ImageAnimation";
+import SmallLink from "../Utilities/SmallLink";
 
 const Intro = () => {
   return (

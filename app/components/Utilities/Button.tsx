@@ -1,4 +1,4 @@
-import HoverTextAnimation from "./HoverTextAnimation";
+import HoverTextAnimation from "../Animations/HoverTextAnimation";
 
 type ButtonProps = {
   variant: "var1" | "var2" | "var3";
