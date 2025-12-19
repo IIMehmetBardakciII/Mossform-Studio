@@ -53,7 +53,7 @@ const FeaturedWorks = () => {
       .join(", ");
 
   return (
-    <section className="mt-gapSectionMobile md:mt-gapSectionDesktop container min-h-screen pb-[45px] max-md:pb-3">
+    <section className=" relative mt-gapSectionMobile md:mt-gapSectionDesktop container min-h-screen pb-[45px] max-md:pb-3">
       <div>
         <ScrollTextAnimation>
           <h2 className="display-xl text-black">
@@ -63,14 +63,14 @@ const FeaturedWorks = () => {
       </div>
 
       {/* Project Section */}
-      <div className="flex flex-col md:gap-gapSectionMobile gap-14">
+      <div className="flex flex-col md:gap-gapSectionMobile gap-14 relative">
         {works.map((work, index) => (
           <div
             key={index}
             className={`flex gap-5 mt-[53px] max-md:mt-10 max-md:flex-col-reverse ${index % 2 !== 0 ? "flex-row-reverse" : ""}`}
           >
             {/* Left Container */}
-            <div className="flex flex-1 flex-col justify-between">
+            <div className="flex flex-1 flex-col justify-between relative">
               <div className="flex  flex-col gap-2">
                 {/* Image */}
                 <div className="md:aspect-734/528 max-h-[528px] aspect-272/270">
