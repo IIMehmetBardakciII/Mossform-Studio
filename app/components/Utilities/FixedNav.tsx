@@ -43,10 +43,10 @@ const FixedNav = () => {
       <div className="fixed top-5 w-full container   z-30" ref={menuRef}>
         <div className=" flex gap-4 w-full justify-end">
           <div className="max-md:hidden">
-            <Button text="Contact Us" variant="var1" />
+            <Button hasCircle text="Contact Us" variant="var1" />
           </div>
           <div  onClick={() => setIsOpen(true)}>
-            <Button text="Menu" variant="var3" />
+            <Button hasCircle={false} text="Menu" variant="var3" />
           </div>
         </div>
       </div>

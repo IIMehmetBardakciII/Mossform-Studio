@@ -56,7 +56,7 @@ const Navbar = ({ variation }: NavbarProps) => {
           </div>
           {/* Contact Us Btn */}
           <div className="btn">
-            <Button variant="var1" text="Contact Us" />
+            <Button hasCircle={true} variant="var1" text="Contact Us" />
           </div>
         </div>
       </div>

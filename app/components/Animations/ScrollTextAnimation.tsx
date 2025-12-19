@@ -8,7 +8,7 @@ const ScrollTextAnimation = ({ children }: { children: React.ReactNode }) => {
   const textRef = useRef<HTMLDivElement | null>(null);
 
   useGSAP(() => {
-    if (!textRef) return;
+    if (!textRef.current) return;
 
     let splitText = SplitText.create(textRef.current, {
       type: "chars",
@@ -27,7 +27,8 @@ const ScrollTextAnimation = ({ children }: { children: React.ReactNode }) => {
         invalidateOnRefresh:true
       }
     });
-  });
+    return ()=>splitText.revert();
+  },{scope:textRef});
   return <div ref={textRef}>{children}</div>;
 };
 

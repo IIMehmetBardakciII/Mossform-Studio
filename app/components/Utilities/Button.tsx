@@ -3,7 +3,8 @@ import HoverTextAnimation from "../Animations/HoverTextAnimation";
 type ButtonProps = {
   variant: "var1" | "var2" | "var3";
   text: string;
-  isSmall?:boolean;
+  isSmall?: boolean;
+  hasCircle: boolean;
 };
 
 const text16px = "text-[16px] leading-none font-display font-medium";
@@ -12,12 +13,12 @@ const buttonVariants = {
   var2: " text-black bg-white px-4 py-3 flex gap-2 items-center",
   var3: "text-black bg-linegray px-4 py-3 flex gap-2 items-center",
 } as const;
-const Button = ({ variant, text,isSmall }: ButtonProps) => {
+const Button = ({ variant, text, isSmall, hasCircle }: ButtonProps) => {
   return (
     <button
       className={`cursor-pointer group textBigContainer rounded-full ${buttonVariants[variant]}`}
     >
-      {variant !== "var3" && (
+      {variant !== "var3" && hasCircle && (
         <span className="relative flex items-center justify-center w-3 h-3 ">
           {/* outer circle ping */}
           <span
@@ -36,7 +37,7 @@ const Button = ({ variant, text,isSmall }: ButtonProps) => {
 
       <HoverTextAnimation
         text={text}
-        className={`${isSmall ?  text16px: "display-base"}`}
+        className={`${isSmall ? text16px : "display-base"}`}
       />
     </button>
   );

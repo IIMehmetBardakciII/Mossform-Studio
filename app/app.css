@@ -55,7 +55,7 @@ body {
 }
 /** Small Links */
 @utility small-link {
-  @apply text-[16px] font-body font-medium  max-sm:font-bold leading-none;
+  @apply text-[16px] max-md:text-[12px] font-body font-medium  max-md:font-bold leading-none;
 }
 
 /* Basic Text Animation */
