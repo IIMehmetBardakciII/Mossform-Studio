@@ -67,7 +67,7 @@ const FeaturedWorks = () => {
         {works.map((work, index) => (
           <div
             key={index}
-            className={`flex gap-5 mt-[53px] max-md:mt-10 max-md:flex-col-reverse ${(index%2!==0)?"flex-row-reverse":""}`}
+            className={`flex gap-5 mt-[53px] max-md:mt-10 max-md:flex-col-reverse ${index % 2 !== 0 ? "flex-row-reverse" : ""}`}
           >
             {/* Left Container */}
             <div className="flex flex-1 flex-col justify-between">
@@ -113,11 +113,13 @@ const FeaturedWorks = () => {
               {/* Should be rendered for last one CTA button */}
               {works.length - 1 === index && (
                 <div className="max-md:flex max-md:justify-center mt-8">
-                  <Button
-                    hasCircle={false}
-                    text="View All Works"
-                    variant="var1"
-                  />
+                  <Link to={"/works"}>
+                    <Button
+                      hasCircle={false}
+                      text="View All Works"
+                      variant="var1"
+                    />
+                  </Link>
                 </div>
               )}
             </div>
