@@ -38,7 +38,7 @@ const OurProcess = () => {
             {/* Steps */}
             <div className="flex flex-col gap-2">
               {OurProcessSteps.map((step, index) => (
-                <span className="body-s text-black">
+                <span key={index} className="body-s text-black">
                   <span className="text-gray tabular-nums">{index}</span> —{" "}
                   {step}
                 </span>

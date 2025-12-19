@@ -3,6 +3,7 @@ import Hero from "~/components/HomeSections/Hero"
 import Intro from "~/components/HomeSections/Intro"
 import OurProcess from "~/components/HomeSections/OurProcess"
 import Testimonials from "~/components/HomeSections/Testimonials"
+import Footer from "~/components/Utilities/Footer"
 
 const HomePage = () => {
   return (
@@ -12,6 +13,7 @@ const HomePage = () => {
       <FeaturedWorks />
       <OurProcess />
       <Testimonials />
+      <Footer/>
     </div>
   )
 }
