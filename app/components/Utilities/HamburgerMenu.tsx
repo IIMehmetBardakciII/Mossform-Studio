@@ -12,7 +12,7 @@ const HamburgerMenu = ({isSmall}:HamburgerMenuProps) => {
   return (
     <>
       <div className="container" onClick={() => setIsOpen(true)}>
-        <Button text="Menu" variant="var3" isSmall={isSmall} />
+        <Button hasCircle={false} text="Menu" variant="var3" isSmall={isSmall} />
       </div>
       <OverlayMenu isOpen={isOpen} setIsOpen={setIsOpen} />
     </>

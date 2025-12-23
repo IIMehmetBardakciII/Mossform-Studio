@@ -4,7 +4,7 @@ import HoverTextAnimation from "../Animations/HoverTextAnimation";
 import HamburgerMenu from "./HamburgerMenu";
 
 type NavbarProps = {
-  variation: "var1" | "var2";
+  variation: "var1" | "var2" | "var3";
 };
 
 const links = [
@@ -21,18 +21,25 @@ const links = [
     text: "Studio",
   },
 ];
+
+const styles = {
+  var1: "text-white",
+  var2: "text-gray",
+  var3: "text-black",
+};
 const getLinkClass = (
   isActive: boolean,
   variation: NavbarProps["variation"]
 ) => {
-  if (variation === "var1") return "text-white";
-  return isActive ? "text-white" : "text-gray";
+  if ((variation === "var1" || variation === "var3") && isActive)
+    return "text-gray";
+  if (variation === "var2" && isActive) return "text-white";
 };
 const Navbar = ({ variation }: NavbarProps) => {
   return (
-    <nav className="pt-6 flex w-full relative z-40 ">
+    <nav className={`pt-6 flex w-full relative z-40 ${styles[variation]}`}>
       <div className="container flex justify-between items-center">
-        <Link to={"/"} className="display-m text-white ">
+        <Link to={"/"} className="display-m ">
           Mossform
         </Link>
         <div className="md:flex hidden items-center lg:gap-[220px] md:gap-[65px]    ">
@@ -48,15 +55,13 @@ const Navbar = ({ variation }: NavbarProps) => {
                 >
                   <HoverTextAnimation text={link.text} />
                 </NavLink>
-                {index < links.length - 1 && (
-                  <span className="text-white">,</span>
-                )}
+                {index < links.length - 1 && <span>,</span>}
               </div>
             ))}
           </div>
           {/* Contact Us Btn */}
           <div className="btn">
-            <Button hasCircle={true} variant="var1" text="Contact Us" />
+            <Button hasCircle={true} variant={variation} text="Contact Us" />
           </div>
         </div>
       </div>

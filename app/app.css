@@ -42,7 +42,7 @@ body {
 }
 /** Body Fonts */
 @utility body-xl {
-  @apply text-[clamp(16px,calc(16px+(80-16)*((100vw-320px)/(1536-320))),80px)] font-body  sm:font-bold  font-semibold tracking-[-0.02em]  leading-none;
+  @apply text-[clamp(16px,calc(16px+(80-16)*((100vw-320px)/(1536-320))),80px)] font-body  font-bold  sm:font-medium tracking-[-0.02em]  leading-none;
 }
 @utility body-l {
   @apply text-[clamp(16px,calc(16px+(48-16)*((100vw-320px)/(1536-320))),48px)] font-body  font-medium max-sm:leading-[1.3] leading-[1.1];

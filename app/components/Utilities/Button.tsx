@@ -19,18 +19,18 @@ const Button = ({ variant, text, isSmall, hasCircle }: ButtonProps) => {
       className={`cursor-pointer group textBigContainer rounded-full ${buttonVariants[variant]}`}
     >
       {variant !== "var3" && hasCircle && (
-        <span className="relative flex items-center justify-center w-3 h-3 ">
+        <span className="relative flex items-center justify-center w-3 h-3  ">
           {/* outer circle ping */}
           <span
-            className="absolute inset-0 rounded-full bg-white opacity-75
-                   group-hover:bg-accent group-hover:animate-ping"
+            className={`absolute inset-0 rounded-full  opacity-75 ${variant==="var1"?"bg-white":"bg-black"}
+                   group-hover:bg-accent group-hover:animate-ping`}
           />
 
           {/* inner circle */}
           <span
-            className="relative inline-flex w-full h-full rounded-full bg-white
+            className={`relative inline-flex w-full h-full rounded-full ${variant==="var1"?"bg-white":"bg-black"}
                    group-hover:bg-accent group-hover:scale-75
-                   transition-transform duration-600  cubic-bezier(0.25, 1, 0.5, 1)"
+                   transition-transform duration-600  cubic-bezier(0.25, 1, 0.5, 1)`}
           />
         </span>
       )}
