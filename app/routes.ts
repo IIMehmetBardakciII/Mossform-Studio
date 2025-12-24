@@ -9,6 +9,7 @@ import {
 export default [
   index("routes/home.tsx"),
   route("works", "routes/works.tsx"),
+  route("works/:slug", "routes/work-detail.tsx"),
   route(".well-known/*", "routes/.well-known.$.tsx"),
 
 //   layout("./auth/layout.tsx", [

@@ -26,7 +26,7 @@ const ImageAnimation = ({ children }: { children: React.ReactNode }) => {
               scrollTrigger: {
                 trigger: imageRef.current,
                 start: "top 80%",
-                end: "bottom 20%",
+                end: "bottom 40%",
                 scrub: 1.5,
                 invalidateOnRefresh: true,
               },

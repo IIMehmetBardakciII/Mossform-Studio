@@ -121,7 +121,7 @@ const WorksPage = () => {
         >
           {projects.map((project, index) => (
             <Link
-              to={"#"}
+              to={`/works/${project.slug}`}
               key={index}
               className={`
          aspect-300/300 transition-all ease-in duration-150 max-w-[300px]

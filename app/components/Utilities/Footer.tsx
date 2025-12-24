@@ -2,13 +2,31 @@ import { Link } from "react-router";
 import Button from "./Button";
 import HoverTextAnimation from "../Animations/HoverTextAnimation";
 import ImageAnimation from "../Animations/ImageAnimation";
+import { useRef } from "react";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/all";
 
+gsap.registerPlugin(ScrollTrigger);
 const Footer = () => {
+  const footerIntoRef=useRef<HTMLDivElement|null>(null);
+  useGSAP(()=>{
+    if(!footerIntoRef.current) return;
+    gsap.from(footerIntoRef.current,{
+      opacity:0,
+      scrollTrigger:{
+        trigger:footerIntoRef.current,
+        start:"top 50%",
+        end:"bottom bottom",
+        scrub:1,
+      }
+    })
+  },{scope:footerIntoRef})
   return (
     <footer className="container min-h-screen mt-10 max-md:mt-14 pb-6 max-sm:pb-30">
       <span className="block w-full h-px bg-linegray" />
       {/* Footer Intro */}
-      <div className="w-full h-dvh flex items-center justify-center flex-col md:gap-10 gap-4">
+      <div ref={footerIntoRef} className="w-full h-dvh flex items-center justify-center flex-col md:gap-10 gap-4">
         <h2 className="max-w-[1200px] display-xl text-black text-center">
           Let’s Create Spaces That Breathe With Nature
         </h2>

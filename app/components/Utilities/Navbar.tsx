@@ -32,7 +32,7 @@ const getLinkClass = (
   variation: NavbarProps["variation"]
 ) => {
   if ((variation === "var1" || variation === "var3") && isActive)
-    return "text-gray";
+    return "text-linegray";
   if (variation === "var2" && isActive) return "text-white";
 };
 const Navbar = ({ variation }: NavbarProps) => {

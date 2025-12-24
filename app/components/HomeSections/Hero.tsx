@@ -1,5 +1,6 @@
 import Navbar from "../Utilities/Navbar";
 
+
 const Hero = () => {
   return (
     <div className="bg-black flex flex-col  relative w-full  h-dvh ">
@@ -22,7 +23,7 @@ const Hero = () => {
             balancing minimal modernity with natural textures.
           </p>
           <span className="flex justify-end items-center  gap-2 body-s text-white max-md:hidden">
-            Scroll to explore{" "}
+            Scroll to explore
             <img
               src="/icons/arrowDown.svg"
               alt="arrowDown"

@@ -3,6 +3,7 @@ import ImageAnimation from "../Animations/ImageAnimation";
 import ScrollTextAnimation from "../Animations/ScrollTextAnimation";
 import HoverTextAnimation from "../Animations/HoverTextAnimation";
 import Button from "../Utilities/Button";
+import { buildSrcSet } from "~/utility/buildSrcSet";
 
 const works = [
   {
@@ -47,10 +48,7 @@ const works = [
 ];
 
 const FeaturedWorks = () => {
-  const buildSrcSet = (mobile?: string, desktop?: string) =>
-    [mobile && `${mobile} 1344w`, desktop && `${desktop} 2688w`]
-      .filter(Boolean)
-      .join(", ");
+
 
   return (
     <section className=" relative mt-gapSectionMobile md:mt-gapSectionDesktop container min-h-screen pb-[45px] max-md:pb-3">
