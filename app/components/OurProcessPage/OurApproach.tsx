@@ -75,7 +75,7 @@ const OurApproach = () => {
             and modern minimalism. By pairing natural materials with thoughtful,
             calming architecture, we create environments that feel intentional
             and deeply connected to nature.
-            <br /> Our purpose is simple: to craft healthier, more meaningful
+            <br /><br /> Our purpose is simple: to craft healthier, more meaningful
             places that restore balance and elevate everyday living.
           </p>
         </div>
