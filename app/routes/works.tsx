@@ -112,7 +112,7 @@ const WorksPage = () => {
 
   return (
     <div ref={containerRef} className="w-full h-dvh relative  bg-black ">
-      <Navbar variation="var2" />
+      <Navbar btnVariation="var2" variation="var2" />
       {/* Projects */}
       <div className=" mt-5 max-md:mt-[105px] flex overflow-x-clip w-full md:h-[400px] h-[300px] ">
         <div

@@ -90,7 +90,6 @@ body {
   z-index: 3;
   transition: transform 0.6s cubic-bezier(0.33, 1, 0.68, 1);
   will-change: transform;
-
 }
 
 .textBigContainer:hover .first-text {
@@ -102,7 +101,6 @@ body {
   filter: blur(0px);
 }
 
-
 .menu-overlay {
   position: fixed; /* 🔥 instead of absolute */
   inset: 0;
@@ -112,17 +110,17 @@ body {
   transition: clip-path 0.6s cubic-bezier(0.33, 1, 0.68, 1);
 }
 
-
 /* Açık hali */
 .menu-overlay.open {
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 
-
 /* Hero Introduction */
-.gap-first-pair{
-  @apply flex w-full gap-[clamp(16px,calc(16px+(272-16)*((100vw-320px)/(1536-320))),272px)] max-md:flex-col
+.gap-first-pair {
+  @apply flex w-full gap-[clamp(16px,calc(16px+(272-16)*((100vw-320px)/(1536-320))),272px)] max-md:flex-col;
 }
-.gap-second-pair{
-  @apply flex w-full gap-[clamp(16px,calc(16px+(80-16)*((100vw-320px)/(1536-320))),80px)] max-md:flex-col-reverse
+.gap-second-pair {
+  @apply flex w-full gap-[clamp(16px,calc(16px+(80-16)*((100vw-320px)/(1536-320))),80px)] max-md:flex-col-reverse;
 }
+
+

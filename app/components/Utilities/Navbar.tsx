@@ -4,6 +4,7 @@ import HoverTextAnimation from "../Animations/HoverTextAnimation";
 import HamburgerMenu from "./HamburgerMenu";
 
 type NavbarProps = {
+  btnVariation:"var1"|"var2"|"var3"|"var4",
   variation: "var1" | "var2" | "var3";
 };
 
@@ -35,7 +36,7 @@ const getLinkClass = (
     return "text-linegray";
   if (variation === "var2" && isActive) return "text-white";
 };
-const Navbar = ({ variation }: NavbarProps) => {
+const Navbar = ({ variation,btnVariation }: NavbarProps) => {
   return (
     <nav className={`pt-6 flex w-full relative z-40 ${styles[variation]}`}>
       <div className="container flex justify-between items-center">
@@ -61,7 +62,7 @@ const Navbar = ({ variation }: NavbarProps) => {
           </div>
           {/* Contact Us Btn */}
           <div className="btn">
-            <Button hasCircle={true} variant={variation} text="Contact Us" />
+            <Button hasCircle={true} variant={btnVariation} text="Contact Us" />
           </div>
         </div>
       </div>

@@ -4,7 +4,7 @@ import Navbar from "../Utilities/Navbar";
 const Hero = () => {
   return (
     <div className="bg-black flex flex-col  relative w-full  h-dvh ">
-      <Navbar variation="var1" />
+      <Navbar btnVariation="var1" variation="var1" />
 
       {/* Texts */}
       <header className="flex container  relative z-20 w-full    h-[calc(100vh-96px)] md:justify-between md:items-end max-md:justify-end max-md:gap-4 max-md:flex-col pb-6    ">
@@ -42,6 +42,8 @@ const Hero = () => {
           src="images/projects/the-garden-pavilion/home.webp"
           alt="the-garden-pavilion"
           className="object-cover w-full h-full"
+          srcSet="/images/projects/the-garden-pavilion/home.webp 1344w, /images/projects/the-garden-pavilion/home.webp 2688w"
+                  sizes="(max-width: 768px) 672px, 1344px"
         />
       </div>
     </div>
