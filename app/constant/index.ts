@@ -13,18 +13,18 @@ export const projects = [
     lounge: "/images/projects/courtyard-house/lounge.webp",
     lounge_mobile: "/images/projects/courtyard-house/lounge-mobile.webp",
     info: {
-      location: "Porto / Portogal",
-      date: "2023",
+      location: "Alentejo / Portugal",
+      date: "2022",
       projectType: "Private Residence",
-      photography: "T. Vale",
-      collaborators: "Elara Coen Studio",
+      photography: "L. Moreno",
+      collaborators: "Atria Form Lab",
       testimonials: {
-        name: "Chango",
-        opinion: `From the very first conversation, the team understood what this space needed to feel like. It wasn’t just about adding a room — it was about creating a place where our everyday life could slow down and feel more connected.
+        name: "Isabel R.",
+        opinion: `We wanted a home that felt inward-looking, protected from noise, yet deeply connected to light and air. The courtyard became the heart of our daily life.
 
-They took the time to really listen to how we live, what we value, and what we wanted this space to bring into our home. The process felt calm and collaborative from start to finish, and we always felt supported along the way.
+The design process was thoughtful and unhurried. Every decision felt intentional, from the way sunlight enters the rooms to how the garden changes through the day.
 
-Now, it feels like this space was always meant to be part of our home. It has become a place where we naturally gather, unwind, and reconnect — not just with nature, but with each other.`,
+Living here feels grounding. It’s quiet, balanced, and constantly reminds us to slow down and be present.`,
       },
     },
   },
@@ -43,18 +43,18 @@ Now, it feels like this space was always meant to be part of our home. It has be
     lounge: "/images/projects/family-house/lounge.webp",
     lounge_mobile: "/images/projects/family-house/lounge-mobile.webp",
     info: {
-      location: "Porto / Portogal",
+      location: "Girona / Spain",
       date: "2023",
-      projectType: "Private Residence",
-      photography: "T. Vale",
-      collaborators: "Elara Coen Studio",
+      projectType: "Family Residence",
+      photography: "M. Alvar",
+      collaborators: "Northline Atelier",
       testimonials: {
-        name: "Chango",
-        opinion: `From the very first conversation, the team understood what this space needed to feel like. It wasn’t just about adding a room — it was about creating a place where our everyday life could slow down and feel more connected.
+        name: "Daniel M.",
+        opinion: `Our goal was a home that could grow with our family while staying calm and open. The architects understood this immediately.
 
-They took the time to really listen to how we live, what we value, and what we wanted this space to bring into our home. The process felt calm and collaborative from start to finish, and we always felt supported along the way.
+They designed spaces that feel generous but never overwhelming, with natural materials that make the house feel warm and lived-in.
 
-Now, it feels like this space was always meant to be part of our home. It has become a place where we naturally gather, unwind, and reconnect — not just with nature, but with each other.`,
+It’s a place where mornings feel gentle and evenings naturally bring everyone together.`,
       },
     },
   },
@@ -73,18 +73,18 @@ Now, it feels like this space was always meant to be part of our home. It has be
     lounge: "/images/projects/forest-canopy/lounge.webp",
     lounge_mobile: "/images/projects/forest-canopy/lounge-mobile.webp",
     info: {
-      location: "Porto / Portogal",
-      date: "2023",
-      projectType: "Private Residence",
-      photography: "T. Vale",
-      collaborators: "Elara Coen Studio",
+      location: "Blackpine Valley / Austria",
+      date: "2024",
+      projectType: "Nature Retreat",
+      photography: "S. Kova",
+      collaborators: "Canopy Works",
       testimonials: {
-        name: "Chango",
-        opinion: `From the very first conversation, the team understood what this space needed to feel like. It wasn’t just about adding a room — it was about creating a place where our everyday life could slow down and feel more connected.
+        name: "Lukas H.",
+        opinion: `This project was about living among the trees without disturbing them. The house feels like it floats within the forest canopy.
 
-They took the time to really listen to how we live, what we value, and what we wanted this space to bring into our home. The process felt calm and collaborative from start to finish, and we always felt supported along the way.
+The team was deeply respectful of the site. Every window frames greenery, every path feels deliberate.
 
-Now, it feels like this space was always meant to be part of our home. It has become a place where we naturally gather, unwind, and reconnect — not just with nature, but with each other.`,
+Being here feels restorative — like the forest has become part of our everyday rhythm.`,
       },
     },
   },
@@ -103,18 +103,18 @@ Now, it feels like this space was always meant to be part of our home. It has be
     lounge: "/images/projects/forest-horizon/lounge.webp",
     lounge_mobile: "/images/projects/forest-horizon/lounge-mobile.webp",
     info: {
-      location: "Porto / Portogal",
+      location: "Nordmark / Sweden",
       date: "2023",
       projectType: "Private Residence",
-      photography: "T. Vale",
-      collaborators: "Elara Coen Studio",
+      photography: "E. Lind",
+      collaborators: "Horizen Blue Studio",
       testimonials: {
-        name: "Chango",
-        opinion: `From the very first conversation, the team understood what this space needed to feel like. It wasn’t just about adding a room — it was about creating a place where our everyday life could slow down and feel more connected.
+        name: "Anna S.",
+        opinion: `We were drawn to the idea of a home that opens toward the landscape rather than enclosing us inside walls.
 
-They took the time to really listen to how we live, what we value, and what we wanted this space to bring into our home. The process felt calm and collaborative from start to finish, and we always felt supported along the way.
+The horizon line became a constant presence — visible from almost every room. The design feels calm, precise, and deeply connected to its surroundings.
 
-Now, it feels like this space was always meant to be part of our home. It has become a place where we naturally gather, unwind, and reconnect — not just with nature, but with each other.`,
+It’s a house that encourages reflection and quiet moments.`,
       },
     },
   },
@@ -134,18 +134,18 @@ Now, it feels like this space was always meant to be part of our home. It has be
     lounge: "/images/projects/lucid-origin/lounge.webp",
     lounge_mobile: "/images/projects/lucid-origin/lounge-mobile.webp",
     info: {
-      location: "Porto / Portogal",
-      date: "2023",
+      location: "Val d’Oria / Italy",
+      date: "2022",
       projectType: "Private Residence",
-      photography: "T. Vale",
-      collaborators: "Elara Coen Studio",
+      photography: "R. Bellini",
+      collaborators: "Lucent Form Studio",
       testimonials: {
-        name: "Chango",
-        opinion: `From the very first conversation, the team understood what this space needed to feel like. It wasn’t just about adding a room — it was about creating a place where our everyday life could slow down and feel more connected.
+        name: "Marco T.",
+        opinion: `Lucid Origin feels like a return to something essential. The materials, the light, and the proportions all feel honest and clear.
 
-They took the time to really listen to how we live, what we value, and what we wanted this space to bring into our home. The process felt calm and collaborative from start to finish, and we always felt supported along the way.
+The process was collaborative and intuitive. We felt involved without being overwhelmed.
 
-Now, it feels like this space was always meant to be part of our home. It has become a place where we naturally gather, unwind, and reconnect — not just with nature, but with each other.`,
+The result is a home that feels timeless, grounded, and quietly expressive.`,
       },
     },
   },
@@ -163,18 +163,18 @@ Now, it feels like this space was always meant to be part of our home. It has be
     lounge: "/images/projects/nature-edge-house/lounge.webp",
     lounge_mobile: "/images/projects/nature-edge-house/lounge-mobile.webp",
     info: {
-      location: "Porto / Portogal",
-      date: "2023",
+      location: "Cliffshore / Ireland",
+      date: "2024",
       projectType: "Private Residence",
-      photography: "T. Vale",
-      collaborators: "Elara Coen Studio",
+      photography: "N. O’Rin",
+      collaborators: "Edgeframe Collective",
       testimonials: {
-        name: "Chango",
-        opinion: `From the very first conversation, the team understood what this space needed to feel like. It wasn’t just about adding a room — it was about creating a place where our everyday life could slow down and feel more connected.
+        name: "Siobhan K.",
+        opinion: `The house sits right at the meeting point of land and landscape. It never competes with nature — it frames it.
 
-They took the time to really listen to how we live, what we value, and what we wanted this space to bring into our home. The process felt calm and collaborative from start to finish, and we always felt supported along the way.
+We appreciated how carefully the team worked with the terrain and weather conditions.
 
-Now, it feels like this space was always meant to be part of our home. It has become a place where we naturally gather, unwind, and reconnect — not just with nature, but with each other.`,
+Living here feels powerful yet peaceful, constantly shaped by light, wind, and seasons.`,
       },
     },
   },
@@ -193,18 +193,18 @@ Now, it feels like this space was always meant to be part of our home. It has be
     lounge: "/images/projects/raised-house/lounge.webp",
     lounge_mobile: "/images/projects/raised-house/lounge-mobile.webp",
     info: {
-      location: "Porto / Portogal",
-      date: "2023",
-      projectType: "Private Residence",
-      photography: "T. Vale",
-      collaborators: "Elara Coen Studio",
+      location: "Riverplain / Slovenia",
+      date: "2021",
+      projectType: "Elevated Residence",
+      photography: "J. Novak",
+      collaborators: "TerraLift Ner Studio",
       testimonials: {
-        name: "Chango",
-        opinion: `From the very first conversation, the team understood what this space needed to feel like. It wasn’t just about adding a room — it was about creating a place where our everyday life could slow down and feel more connected.
+        name: "Petra V.",
+        opinion: `Raising the house off the ground transformed how we experience the site. It feels light, open, and respectful to the land.
 
-They took the time to really listen to how we live, what we value, and what we wanted this space to bring into our home. The process felt calm and collaborative from start to finish, and we always felt supported along the way.
+The architects balanced technical clarity with emotional sensitivity.
 
-Now, it feels like this space was always meant to be part of our home. It has become a place where we naturally gather, unwind, and reconnect — not just with nature, but with each other.`,
+The result is a home that feels both protective and free.`,
       },
     },
   },
@@ -223,18 +223,18 @@ Now, it feels like this space was always meant to be part of our home. It has be
     lounge: "/images/projects/sagaponack-box/lounge.webp",
     lounge_mobile: "/images/projects/sagaponack-box/lounge-mobile.webp",
     info: {
-      location: "Porto / Portogal",
+      location: "East Dunes / New York",
       date: "2023",
-      projectType: "Private Residence",
-      photography: "T. Vale",
-      collaborators: "Elara Coen Studio",
+      projectType: "Weekend House",
+      photography: "C. Hale",
+      collaborators: "Linear Field Office",
       testimonials: {
-        name: "Chango",
-        opinion: `From the very first conversation, the team understood what this space needed to feel like. It wasn’t just about adding a room — it was about creating a place where our everyday life could slow down and feel more connected.
+        name: "Evan C.",
+        opinion: `The simplicity of the form was what drew us in. Nothing feels excessive, yet everything feels considered.
 
-They took the time to really listen to how we live, what we value, and what we wanted this space to bring into our home. The process felt calm and collaborative from start to finish, and we always felt supported along the way.
+Large openings connect us to the landscape, while the interiors remain calm and understated.
 
-Now, it feels like this space was always meant to be part of our home. It has become a place where we naturally gather, unwind, and reconnect — not just with nature, but with each other.`,
+It’s a place where weekends stretch longer than expected.`,
       },
     },
   },
@@ -284,18 +284,18 @@ Now, it feels like this space was always meant to be part of our home. It has be
     lounge: "/images/projects/terrace-house/lounge.webp",
     lounge_mobile: "/images/projects/terrace-house/lounge-mobile.webp",
     info: {
-      location: "Porto / Portogal",
-      date: "2023",
+      location: "Hillside Quarter / Switzerland",
+      date: "2022",
       projectType: "Private Residence",
-      photography: "T. Vale",
-      collaborators: "Elara Coen Studio",
+      photography: "A. Meier",
+      collaborators: "Strata Studio",
       testimonials: {
-        name: "Chango",
-        opinion: `From the very first conversation, the team understood what this space needed to feel like. It wasn’t just about adding a room — it was about creating a place where our everyday life could slow down and feel more connected.
+        name: "Jonas R.",
+        opinion: `The terraces became natural extensions of our living spaces. Each level offers a different relationship with the surroundings.
 
-They took the time to really listen to how we live, what we value, and what we wanted this space to bring into our home. The process felt calm and collaborative from start to finish, and we always felt supported along the way.
+The design process was clear and deeply site-specific.
 
-Now, it feels like this space was always meant to be part of our home. It has become a place where we naturally gather, unwind, and reconnect — not just with nature, but with each other.`,
+It feels like living in layers of landscape rather than floors of a house.`,
       },
     },
   },
@@ -316,18 +316,18 @@ Now, it feels like this space was always meant to be part of our home. It has be
     lounge: "/images/projects/the-garden-pavilion/lounge.webp",
     lounge_mobile: "/images/projects/the-garden-pavilion/lounge-mobile.webp",
     info: {
-      location: "Porto / Portogal",
-      date: "2023",
-      projectType: "Private Residence",
-      photography: "T. Vale",
-      collaborators: "Elara Coen Studio",
+      location: "Meadowpark / France",
+      date: "2024",
+      projectType: "Garden Pavilion",
+      photography: "L. Durant",
+      collaborators: "Argent Amotani Studio",
       testimonials: {
-        name: "Chango",
-        opinion: `From the very first conversation, the team understood what this space needed to feel like. It wasn’t just about adding a room — it was about creating a place where our everyday life could slow down and feel more connected.
+        name: "Claire B.",
+        opinion: `This pavilion was imagined as a quiet pause within the garden. A place to read, reflect, and reconnect.
 
-They took the time to really listen to how we live, what we value, and what we wanted this space to bring into our home. The process felt calm and collaborative from start to finish, and we always felt supported along the way.
+The structure feels light and open, yet grounded in natural materials.
 
-Now, it feels like this space was always meant to be part of our home. It has become a place where we naturally gather, unwind, and reconnect — not just with nature, but with each other.`,
+It has become a cherished part of our daily routine.`,
       },
     },
   },
@@ -346,18 +346,18 @@ Now, it feels like this space was always meant to be part of our home. It has be
     lounge: "/images/projects/woodland-cabin/lounge.webp",
     lounge_mobile: "/images/projects/woodland-cabin/lounge-mobile.webp",
     info: {
-      location: "Porto / Portogal",
-      date: "2023",
-      projectType: "Private Residence",
-      photography: "T. Vale",
-      collaborators: "Elara Coen Studio",
+      location: "Pinefall / Canada",
+      date: "2021",
+      projectType: "Cabin Retreat",
+      photography: "D. Rowan",
+      collaborators: "Garbo Cita Studio",
       testimonials: {
-        name: "Chango",
-        opinion: `From the very first conversation, the team understood what this space needed to feel like. It wasn’t just about adding a room — it was about creating a place where our everyday life could slow down and feel more connected.
+        name: "Noah P.",
+        opinion: `The cabin feels deeply rooted in its environment. Nothing feels imposed — everything feels earned.
 
-They took the time to really listen to how we live, what we value, and what we wanted this space to bring into our home. The process felt calm and collaborative from start to finish, and we always felt supported along the way.
+We admired the restraint in the design. It allows the forest to remain the main character.
 
-Now, it feels like this space was always meant to be part of our home. It has become a place where we naturally gather, unwind, and reconnect — not just with nature, but with each other.`,
+Staying here feels grounding, quiet, and deeply human.`,
       },
     },
   },
@@ -373,18 +373,20 @@ Now, it feels like this space was always meant to be part of our home. It has be
     lounge: "/images/projects/zenith-pavilion/lounge.webp",
     lounge_mobile: "/images/projects/zenith-pavilion/lounge-mobile.webp",
     info: {
-      location: "Porto / Portogal",
-      date: "2023",
-      projectType: "Private Residence",
-      photography: "T. Vale",
+      location: "CA / USA",
+      date: "2024",
+      projectType: "Retreat Structure",
+      photography: "Olivia Kari,",
       collaborators: "Elara Coen Studio",
       testimonials: {
-        name: "Chango",
-        opinion: `From the very first conversation, the team understood what this space needed to feel like. It wasn’t just about adding a room — it was about creating a place where our everyday life could slow down and feel more connected.
+        name: "Karen",
+        opinion: `This space has changed the way I start and end my day. It feels calm, grounded, and completely mine — a place where I can breathe, reflect, and return to myself.
 
-They took the time to really listen to how we live, what we value, and what we wanted this space to bring into our home. The process felt calm and collaborative from start to finish, and we always felt supported along the way.
+Before this, I struggled to find a quiet moment that truly felt uninterrupted. Now, I have a space that gently holds that stillness for me. I can sit in silence, meditate, stretch, journal, or simply watch the light move across the walls.
 
-Now, it feels like this space was always meant to be part of our home. It has become a place where we naturally gather, unwind, and reconnect — not just with nature, but with each other.`,
+What I love most is how natural it feels. Nothing feels forced or overdesigned — it feels soft, intentional, and deeply comforting. It’s not just a structure; it’s become a ritual, a pause, and a reminder to slow down.
+
+This space has brought me back to myself in ways I didn’t expect, and I’m so grateful to have it as part of my daily life.`,
       },
     },
   },
