@@ -391,3 +391,70 @@ This space has brought me back to myself in ways I didn’t expect, and I’m so
     },
   },
 ];
+
+
+export const team=[
+  {
+    role:"Project Director",
+    name:"Olivia Reyes",
+    skill:"Advanced Digital Modeling",
+    define:"Committed to minimizing environmental impact by harnessing local resources and maximizing passive energy efficiency in every design.",
+    image:"/images/our-studio/Olivia.webp"
+  },
+  {
+    role:"Principal Architect",
+    name:"Elias Vance",
+    skill:"Sustainable Systems Integration, Biophilic Design",
+    define:"Driving the firm's vision, Elias focuses on creating structures that seamlessly merge with their ecological surroundings, ensuring every project is rooted in nature and longevity.",
+    image:"/images/our-studio/Elias.webp"
+  },
+  {
+    role:"Senior Architect",
+    name:"Kai Lin",
+    skill:"Urban Landscape Integration & Green Infrastructure",
+    define:"Specializes in blending urban forms with natural flows, seeing every rooftop as potential soil.",
+    image:"/images/our-studio/Kai.webp"
+  },
+  {
+    role:"Architect",
+    name:"Isabelle D.",
+    skill:"Passive Design Strategies, Regional Material Sourcing",
+    define:"Committed to minimizing environmental impact by using local resources and maximizing passive energy efficiency.",
+    image:"/images/our-studio/Isaabelle.webp"
+  },
+  {
+    role:"Architect",
+    name:"Liam C.",
+    skill:"Complex Geometry and Form Generation",
+    define:"Excels at transforming abstract, nature-inspired concepts into buildable, innovative structures through mastery of complex forms.",
+    image:"/images/our-studio/Liam.webp"
+  },
+  {
+    role:"Architect",
+    name:"Neva S.",
+    skill:"Zero-Carbon Design, Life Cycle Assessment",
+    define:"Focused on future-proofing architecture, Neva ensures our projects achieve the highest standards of ecological responsibility and minimal carbon footprint.",
+    image:"/images/our-studio/Neva.webp"
+  },
+  {
+    role:"Interior Designer",
+    name:"Ece Demir",
+    skill:"Natural Light and Shadow Play, Organic Textures",
+    define:"Designs interiors that utilize sunlight and tactile materials to evoke a profound sense of calm, natural connection, and spatial harmony.",
+    image:"/images/our-studio/Ece.webp"
+  },
+  {
+    role:"Business Development Manager",
+    name:"Zara Khan",
+    skill:"Client Relations, Cultural Contextualization",
+    define:"Ensures the studio's philosophical approach is clearly and ethically communicated, translating the client's vision into the Mossform methodology.",
+    image:"/images/our-studio/Zara.webp"
+  },
+    {
+    role:"Finance & Operations",
+    name:"Ben Carter",
+    skill:"Project Finance and Workflow Management",
+    define:"The anchor of the studio, Ben manages resources and logistics, ensuring every project is delivered efficiently and within defined budgets.",
+    image:"/images/our-studio/Ben.webp"
+  },
+]
