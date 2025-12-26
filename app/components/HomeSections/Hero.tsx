@@ -42,7 +42,7 @@ const Hero = () => {
           src="images/projects/the-garden-pavilion/home.webp"
           alt="the-garden-pavilion"
           className="object-cover w-full h-full"
-          srcSet="/images/projects/the-garden-pavilion/home.webp 1344w, /images/projects/the-garden-pavilion/home.webp 2688w"
+          srcSet="/images/projects/the-garden-pavilion/home-mobile.webp 1344w, /images/projects/the-garden-pavilion/home.webp 2688w"
                   sizes="(max-width: 768px) 672px, 1344px"
         />
       </div>

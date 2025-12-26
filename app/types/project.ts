@@ -19,9 +19,17 @@ export type Project = {
     projectType: string;
     photography: string;
     collaborators: string;
-    testimonials:{
-      name:string;
-      opinion:string;
-    }
+    testimonials: {
+      name: string;
+      opinion: string;
+    };
   };
+};
+
+export type MemberType = {
+  role: string;
+  name: string;
+  skill: string;
+  define: string;
+  image: string;
 };

@@ -9,6 +9,7 @@ export default [
   route("works", "routes/works.tsx"),
   route("works/:slug", "routes/work-detail.tsx"),
   route("process", "routes/our-process.tsx"),
+  route("studio", "routes/our-studio.tsx"),
   route(".well-known/*", "routes/.well-known.$.tsx"),
 
 //   layout("./auth/layout.tsx", [

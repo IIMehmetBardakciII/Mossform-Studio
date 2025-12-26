@@ -7,8 +7,8 @@ type HeroProps = {
 };
 const Hero = ({ project }: HeroProps) => {
   return (
-    <div className=" relativ isolate w-full  h-dvh ">
-      <Navbar variation="var1" />
+    <div className=" relative isolate w-full  h-dvh ">
+      <Navbar btnVariation="var1" variation="var1" />
 
       {/* Info */}
       <div className=" relative z-20 container">
