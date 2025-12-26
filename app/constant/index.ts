@@ -135,7 +135,7 @@ It’s a house that encourages reflection and quiet moments.`,
     lounge_mobile: "/images/projects/lucid-origin/lounge-mobile.webp",
     info: {
       location: "Val d’Oria / Italy",
-      date: "2022",
+      date: "2021",
       projectType: "Private Residence",
       photography: "R. Bellini",
       collaborators: "Lucent Form Studio",

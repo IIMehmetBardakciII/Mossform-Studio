@@ -23,7 +23,7 @@ const Team = () => {
       {/* Team */}
      <div className="mt-[108px] max-md:mt-14 flex flex-col gap-3 max-md:gap-8 items-center justify-center">
          {team.map((member)=>(
-        <MemberComponent {...member} />
+        <MemberComponent key={member.name} {...member} />
       ))}
      </div>
 

@@ -1,7 +1,6 @@
 import { Link } from "react-router";
 import Button from "./Button";
 import HoverTextAnimation from "../Animations/HoverTextAnimation";
-import ImageAnimation from "../Animations/ImageAnimation";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
@@ -23,7 +22,7 @@ const Footer = () => {
     })
   },{scope:footerIntoRef})
   return (
-    <footer className="container min-h-screen mt-10 max-md:mt-14 pb-6 max-sm:pb-30">
+    <footer className="container min-h-screen mt-10 max-md:mt-14 pb-6 ">
       <span className="block w-full h-px bg-linegray" />
       {/* Footer Intro */}
       <div ref={footerIntoRef} className="w-full h-dvh flex items-center justify-center flex-col md:gap-10 gap-4">
@@ -116,7 +115,6 @@ const Footer = () => {
         </div>
         {/* Right Side */}
         <div className="flex-1 max-md:mt-4">
-          <ImageAnimation>
             <div className="md:aspect-483/582 aspect-272/145 max-h-[582px] min-w-[272px]">
               <img
                 src="/images/thumbnailHome.webp"
@@ -124,7 +122,6 @@ const Footer = () => {
                 className="w-full h-full object-cover"
               />
             </div>
-          </ImageAnimation>
         </div>
       </div>
       {/* Small Details */}
