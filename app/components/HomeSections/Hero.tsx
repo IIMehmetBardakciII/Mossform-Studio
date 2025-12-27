@@ -2,6 +2,7 @@ import Navbar from "../Utilities/Navbar";
 
 
 const Hero = () => {
+
   return (
     <div className="bg-black flex flex-col  relative w-full  h-dvh ">
       <Navbar btnVariation="var1" variation="var1" />
@@ -34,8 +35,8 @@ const Hero = () => {
       </header>
 
       {/* Background image */}
-      <div className="absolute w-full h-full">
-        <div className="w-full h-full bg-[#0B0B0B] opacity-20 absolute" />
+      <div className="absolute bgImage w-full h-full">
+        <div className="w-full h-full bg-[#0B0B0B] opacity-20 absolute " />
         <img
         loading="eager"
         fetchPriority="high"
