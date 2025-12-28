@@ -10,6 +10,7 @@ const works = [
     projectName: "Sagaponack Box",
     location: "USA",
     date: "2024",
+    slug: "sagaponack-box",
     img1: {
       desktop: "/images/projects/sagaponack-box/home.webp",
       mobile: "/images/projects/sagaponack-box/home-mobile.webp",
@@ -23,6 +24,7 @@ const works = [
     projectName: "Courtyard House",
     location: "Portugal",
     date: "2023",
+    slug: "courtyard-house",
     img1: {
       desktop: "/images/projects/courtyard-house/home.webp",
       mobile: "/images/projects/courtyard-house/home-mobile.webp",
@@ -36,6 +38,7 @@ const works = [
     projectName: "Garden Pavilion",
     location: "Australia",
     date: "2020",
+    slug: "garden-pavilion",
     img1: {
       desktop: "/images/projects/the-garden-pavilion/home.webp",
       mobile: "/images/projects/the-garden-pavilion/home-mobile.webp",
@@ -48,8 +51,6 @@ const works = [
 ];
 
 const FeaturedWorks = () => {
-
-
   return (
     <section className=" relative mt-gapSectionMobile md:mt-gapSectionDesktop container min-h-screen pb-[45px] max-md:pb-3">
       <div>
@@ -94,7 +95,7 @@ const FeaturedWorks = () => {
                   </span>
                   <Link
                     className=" order-4 max-md:order-2 flex gap-1.5 items-center textBigContainer group"
-                    to={"#"}
+                    to={`/works/${work.slug}`}
                   >
                     <span>
                       <HoverTextAnimation text="View The Project" />

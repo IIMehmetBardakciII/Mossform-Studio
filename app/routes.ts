@@ -8,15 +8,13 @@ import {
 export default [
   index("routes/home.tsx"),
 
-
   layout("./components/TransitionLayout.tsx", [
     route("works", "routes/works.tsx"),
     route("works/:slug", "routes/work-detail.tsx"),
     route("process", "routes/our-process.tsx"),
     route("studio", "routes/our-studio.tsx"),
-    route("404", "routes/404.tsx"),
+    route("*", "routes/404.tsx"),
   ]),
 
   route(".well-known/*", "routes/.well-known.$.tsx"),
-
 ] satisfies RouteConfig;

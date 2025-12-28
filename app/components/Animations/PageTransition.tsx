@@ -9,7 +9,6 @@ const PageTransition = ({ children }: { children: React.ReactNode }) => {
   useGSAP(() => {
     if (!overlayRef.current) return;
 
-    console.log("deneme")
     // Fade overlay from 1 -> 0
     gsap.to(overlayRef.current, {
       opacity: 0,

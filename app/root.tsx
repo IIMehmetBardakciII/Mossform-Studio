@@ -10,7 +10,6 @@ import {
 import type { Route } from "./+types/root";
 import "./app.css";
 import ReactLenis from "lenis/react";
-import FixedNav from "./components/Utilities/FixedNav";
 
 export const links: Route.LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
