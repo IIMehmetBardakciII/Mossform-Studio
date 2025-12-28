@@ -2,6 +2,7 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger, SplitText } from "gsap/all";
 import { useRef, useState } from "react";
+import PageTransition from "~/components/Animations/PageTransition";
 import OurApproach from "~/components/OurProcessPage/OurApproach";
 import Footer from "~/components/Utilities/Footer";
 import Navbar from "~/components/Utilities/Navbar";
@@ -116,7 +117,7 @@ const ProcessStep = ({ step }: ProcessStepType) => {
     return () => mm.revert();
   });
   return (
-    <section
+    <div
       ref={stepRef}
       className="flex max-md:flex-col-reverse max-md:mt-6  md:h-dvh h-full items-center  "
     >
@@ -140,34 +141,34 @@ const ProcessStep = ({ step }: ProcessStepType) => {
           className="w-full h-full object-cover "
         />
       </div>
-    </section>
+    </div>
   );
 };
 
 const OurProcessPage = () => {
   return (
-    <div className="w-full relative h-full bg-white">
-      <Navbar btnVariation="var4" variation="var3" />
-      <div className="container relative mt-14 max-md:mt-10">
-        <div className="md:absolute md:top-0 relative  w-fit z-50">
-          <h1 className="display-xl text-black">Our Process</h1>
-          <span className="text-gray body-base absolute -top-4 -right-10">
-            (06)
-          </span>
+      <section className="w-full relative h-full bg-white">
+        <Navbar btnVariation="var4" variation="var3" />
+        <div className="container relative mt-14 max-md:mt-10">
+          <div className="md:absolute md:top-0 relative  w-fit z-50">
+            <h1 className="display-xl text-black">Our Process</h1>
+            <span className="text-gray body-base absolute -top-4 -right-10">
+              (06)
+            </span>
+          </div>
+
+          {/* Steps */}
+          <div className="flex flex-col">
+            {steps.map((step) => (
+              <ProcessStep key={step.id} step={step} />
+            ))}
+          </div>
         </div>
 
-        {/* Steps */}
-        <div className="flex flex-col">
-          {steps.map((step) => (
-            <ProcessStep key={step.id} step={step} />
-          ))}
-        </div>
-      </div>
+        <OurApproach />
 
-      <OurApproach />
-
-      <Footer />
-    </div>
+        <Footer />
+      </section>
   );
 };
 
