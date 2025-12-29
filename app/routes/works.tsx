@@ -44,7 +44,7 @@ const WorksPage = () => {
 
       const mm = gsap.matchMedia();
       //* Horizontal scroll animation >=768px
-      const scrollSpeed=1.8;
+      const scrollSpeed = 1.8;
       mm.add("(min-width:768px)", () => {
         gsap.to(scrollControll.current, {
           x: () => -getMaxTranslateX(),
@@ -52,7 +52,7 @@ const WorksPage = () => {
           scrollTrigger: {
             trigger: containerRef.current,
             start: "top top",
-            end: () => `+=${getMaxTranslateX()*scrollSpeed}`,
+            end: () => `+=${getMaxTranslateX() * scrollSpeed}`,
             scrub: true,
             pin: true,
             snap: {
@@ -96,7 +96,6 @@ const WorksPage = () => {
             const index = Math.round(progress * (totalItems - 1)); // This convert to progress 0-1  range to 0-12 index number f.e: 0.5*12=6 and currentProject will be 6
             setCurrentProject(index);
           },
-
         })[0];
 
         return () => {
@@ -111,61 +110,80 @@ const WorksPage = () => {
   );
 
   return (
-    <div ref={containerRef} className="w-full h-dvh relative  bg-black ">
-      <Navbar btnVariation="var2" variation="var2" />
-      {/* Projects */}
-      <div className=" mt-5 max-md:mt-[105px] flex overflow-x-clip w-full md:h-[400px] h-[300px] ">
-        <div
-          ref={scrollControll}
-          className="w-full h-full flex gap-4 max-md:gap-1  "
-        >
-          {projects.map((project, index) => (
-            <Link
-              to={`/works/${project.slug}`}
-              key={index}
-              className={`
+    <>
+      {/* Seo */}
+      <title>Mossform Architecture | Our Works</title>
+      <meta
+        name="description"
+        content="Explore selected architectural works by Mossform Architecture, featuring calm, modern, and nature-driven projects shaped by biophilic and sustainable design principles."
+      />
+      <meta
+        property="og:title"
+        content="Mossform Architecture | Our Works"
+      />
+
+      <meta
+        property="og:description"
+        content="A curated portfolio of calm, modern, and nature-driven architectural projects by Mossform Architecture."
+      />
+
+      {/* Content */}
+      <div ref={containerRef} className="w-full h-dvh relative  bg-black ">
+        <Navbar btnVariation="var2" variation="var2" />
+        {/* Projects */}
+        <div className=" mt-5 max-md:mt-[105px] flex overflow-x-clip w-full md:h-[400px] h-[300px] ">
+          <div
+            ref={scrollControll}
+            className="w-full h-full flex gap-4 max-md:gap-1  "
+          >
+            {projects.map((project, index) => (
+              <Link
+                to={`/works/${project.slug}`}
+                key={index}
+                className={`
          aspect-300/300 transition-all ease-in duration-150 max-w-[300px]
         ${currentProject === index ? "md:aspect-300/400 md:max-h-[400px]   opacity-100 hover:opacity-80  hover:border hover:border-white" : "md:aspect-300/360 md:max-h-[360px]  opacity-50"}
         `}
-            >
-              <ImageContainer src={project.home} />
-            </Link>
-          ))}
-        </div>
-      </div>
-      {/* Divider */}
-      <span className="block container w-full h-px max-md:hidden bg-[#595959] my-10" />
-      {/* Info */}
-      <div className="container max-md:mt-8">
-        <h1 className="display-m text-gray">Works</h1>
-        <div className="text-white flex w-full justify-between items-end">
-          <span className=" capitalize text-[80px] font-medium font-body leading-none">
-            {String(currentProject + 1).padStart(2, "0")}
-          </span>
-          <span ref={titleRef} className="body-xl capitalize md:ml-5">
-            {projects[currentProject].name}
-          </span>
-          <div className="flex items-center justify-center gap-2 max-md:hidden leading-none">
-            <span>Scroll to explore</span>
-            <img
-              src="/icons/arrowRight-white.svg"
-              alt="arrowRight"
-              className="animate-pulse"
-            />
+              >
+                <ImageContainer src={project.home} />
+              </Link>
+            ))}
           </div>
         </div>
-        <div className="w-full  flex justify-center mt-6">
-          <div className="w-[500px] h-px bg-[#595959] relative">
-            <span
-              style={{
-                width: `${((currentProject + 1) / projects.length) * 100}%`,
-              }}
-              className="h-px transition-all ease-in duration-150 bg-gray absolute left-0"
-            />
+        {/* Divider */}
+        <span className="block container w-full h-px max-md:hidden bg-[#595959] my-10" />
+        {/* Info */}
+        <div className="container max-md:mt-8">
+          <h1 className="display-m text-gray">Works</h1>
+          <div className="text-white flex w-full justify-between items-end">
+            <span className=" capitalize text-[80px] font-medium font-body leading-none">
+              {String(currentProject + 1).padStart(2, "0")}
+            </span>
+            <span ref={titleRef} className="body-xl capitalize md:ml-5">
+              {projects[currentProject].name}
+            </span>
+            <div className="flex items-center justify-center gap-2 max-md:hidden leading-none">
+              <span>Scroll to explore</span>
+              <img
+                src="/icons/arrowRight-white.svg"
+                alt="arrowRight"
+                className="animate-pulse"
+              />
+            </div>
+          </div>
+          <div className="w-full  flex justify-center mt-6">
+            <div className="w-[500px] h-px bg-[#595959] relative">
+              <span
+                style={{
+                  width: `${((currentProject + 1) / projects.length) * 100}%`,
+                }}
+                className="h-px transition-all ease-in duration-150 bg-gray absolute left-0"
+              />
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

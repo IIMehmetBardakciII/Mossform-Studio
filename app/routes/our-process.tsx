@@ -137,7 +137,7 @@ const ProcessStep = ({ step }: ProcessStepType) => {
         <img
           ref={imageRef}
           src={step.img}
-          alt={step.img}
+          alt={`${step.header} phase of Mossform Architecture Studio process`}
           className="w-full h-full object-cover "
         />
       </div>
@@ -147,6 +147,25 @@ const ProcessStep = ({ step }: ProcessStepType) => {
 
 const OurProcessPage = () => {
   return (
+    <>
+      {/* Seo */}
+      <title>Mossform Architecture | Our Process</title>
+
+      <meta
+        name="description"
+        content="Discover Mossform Architecture Studio’s design process, from discovery and concept development to construction oversight and refinement, shaping calm and nature-driven spaces."
+      />
+
+      <meta
+        property="og:title"
+        content="Our Process | Mossform Architecture Studio"
+      />
+      <meta
+        property="og:description"
+        content="A clear and thoughtful architectural process focused on clarity, collaboration, and nature-driven design."
+      />
+
+      {/* Content */}
       <section className="w-full relative h-full bg-white">
         <Navbar btnVariation="var4" variation="var3" />
         <div className="container relative mt-14 max-md:mt-10">
@@ -169,6 +188,7 @@ const OurProcessPage = () => {
 
         <Footer />
       </section>
+    </>
   );
 };
 
