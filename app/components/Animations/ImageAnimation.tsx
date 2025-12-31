@@ -6,27 +6,26 @@ import { useRef } from "react";
 gsap.registerPlugin(ScrollTrigger);
 const ImageAnimation = ({ children }: { children: React.ReactNode }) => {
   const imageRef = useRef<HTMLDivElement | null>(null);
-   useGSAP(
-    (context) => {
+  useGSAP(
+    () => {
       if (!imageRef.current) return;
 
-      // ✅ MATCHMEDIA SCOPED TO CONTEXT
-      const mm = gsap.matchMedia(context);
+      const mm = gsap.matchMedia();
 
       mm.add(
         {
           isDesktop: "(min-width:768px)",
           mobile: "(max-width: 767px)",
         },
-        (ctx) => {
-          const { isDesktop } = ctx.conditions!;
+        (context) => {
+          const { isDesktop } = context.conditions!;
 
           const tl = gsap.timeline({
             scrollTrigger: {
               trigger: imageRef.current,
               start: "top 80%",
               end: "bottom 40%",
-              scrub: 1,
+              scrub: 1.5,
               invalidateOnRefresh: true,
             },
           });
@@ -51,11 +50,6 @@ const ImageAnimation = ({ children }: { children: React.ReactNode }) => {
             yPercent: isDesktop ? -20 : 0,
             ease: "power2.in",
           });
-
-          // ✅ EXPLICIT CLEANUP
-          return () => {
-            tl.kill();
-          };
         }
       );
 
