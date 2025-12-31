@@ -115,7 +115,7 @@ const ProcessStep = ({ step }: ProcessStepType) => {
       }
     );
     return () => mm.revert();
-  });
+  },{scope:stepRef});
   return (
     <div
       ref={stepRef}
@@ -146,6 +146,7 @@ const ProcessStep = ({ step }: ProcessStepType) => {
 };
 
 const OurProcessPage = () => {
+ 
   return (
     <>
       {/* Seo */}
@@ -166,7 +167,7 @@ const OurProcessPage = () => {
       />
 
       {/* Content */}
-      <section className="w-full relative h-full bg-white">
+      <section  className="w-full relative h-full bg-white">
         <Navbar btnVariation="var4" variation="var3" />
         <div className="container relative mt-14 max-md:mt-10">
           <div className="md:absolute md:top-0 relative  w-fit z-50">

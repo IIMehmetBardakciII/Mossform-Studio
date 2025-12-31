@@ -27,7 +27,7 @@ const ScrollTextAnimation = ({ children }: { children: React.ReactNode }) => {
               trigger: textRef.current,
               start: "top 80%",
               end: "bottom 90%",
-              scrub: 2,
+              scrub: 1,
               invalidateOnRefresh: true,
             },
           });

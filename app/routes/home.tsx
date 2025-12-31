@@ -19,7 +19,6 @@ const HomePage = () => {
 
     const internalHomeClick = location.state?.internalHomeClick === true;
 
-
     //  Allow preload only for first entry OR intentional home click
     if (internalHomeClick || !hasSeenHomePreload) {
       setIsLoading(true);
