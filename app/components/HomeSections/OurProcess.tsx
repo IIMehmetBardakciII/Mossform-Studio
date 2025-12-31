@@ -29,7 +29,7 @@ const OurProcess = () => {
               <ImageAnimation>
                 <img
                   src="/images/our-process/concept-design.webp"
-                  alt="concept-design"
+                  alt="Concept Design step in Mossform architecture process"
                   className="w-full h-full object-cover"
                 />
               </ImageAnimation>
@@ -39,7 +39,7 @@ const OurProcess = () => {
             <div className="flex flex-col gap-2">
               {OurProcessSteps.map((step, index) => (
                 <span key={index} className="body-s text-black">
-                  <span className="text-gray tabular-nums">{index}</span> —{" "}
+                  <span className="text-gray tabular-nums">{String(index + 1).padStart(2,"0")}</span> —{" "}
                   {step}
                 </span>
               ))}

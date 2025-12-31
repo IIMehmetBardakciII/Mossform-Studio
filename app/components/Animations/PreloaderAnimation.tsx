@@ -14,7 +14,7 @@ const Preloader = ({ onComplete }: { onComplete: () => void }) => {
   const animateStone = (tl: gsap.core.Timeline) => {
     tl.from(stoneRef.current, {
       opacity: 0,
-      duration: 1.5,
+      duration: 1.0,
       ease: "power2.inOut",
     });
   };
@@ -28,7 +28,7 @@ const Preloader = ({ onComplete }: { onComplete: () => void }) => {
           alignOrigin: [0.5, 0.5],
           //   autoRotate: false,
         },
-        duration: 4,
+        duration: 3,
         ease: "sine.inOut",
       },
       "-=1"
@@ -59,7 +59,7 @@ const Preloader = ({ onComplete }: { onComplete: () => void }) => {
         split.chars,
         {
           yPercent: 120,
-          duration: 1.2,
+          duration: 1.0,
           ease: "power3.out",
           stagger: {
             each: 0.03,
@@ -115,18 +115,18 @@ const Preloader = ({ onComplete }: { onComplete: () => void }) => {
         duration: 0.01,
       });
 
-      //   Stone animation reveal
-      animateStone(tl);
-      //   Leaf animation reveal
+      // //   Stone animation reveal
+      // animateStone(tl);
+      // //   Leaf animation reveal
 
-      animateLeaf(tl);
+      // animateLeaf(tl);
 
       //   Stone & Leaf scale animaiton
-      tl.to(stoneandleafWrapper.current, {
-        scale: 0.5,
-        duration: 1,
-        ease: "power2.inOut",
-      });
+      // tl.to(stoneandleafWrapper.current, {
+      //   scale: 0.5,
+      //   duration: 0.7,
+      //   ease: "power2.inOut",
+      // });
 
       //   Texts animation
 
@@ -134,7 +134,7 @@ const Preloader = ({ onComplete }: { onComplete: () => void }) => {
 
       tl.to(preloaderContainer.current, {
         opacity: 0,
-        duration: 0.8,
+        duration: 0.6,
         ease: "sine.inOut",
       });
 

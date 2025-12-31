@@ -77,7 +77,7 @@ const FeaturedWorks = () => {
                     <img
                       loading="lazy"
                       src={work.img1.desktop}
-                      alt="sagaponack home"
+                      alt="Sagaponack Box - exterior view of modern architecture project"
                       className="w-full h-full object-cover"
                       srcSet={buildSrcSet(work.img1.mobile, work.img1.desktop)}
                       sizes="(max-width: 768px) 672px, 1344px"
@@ -86,7 +86,7 @@ const FeaturedWorks = () => {
                 </div>
                 {/* Info&Links */}
                 <div className="flex flex-wrap w-full justify-between max-md:gap-2 small-link text-black">
-                  <span className="order-1">{work.projectName}</span>
+                  <h3 className="order-1">{work.projectName}</h3>
                   <span className="text-gray order-2 max-md:order-3">
                     ({work.location})
                   </span>
@@ -130,7 +130,7 @@ const FeaturedWorks = () => {
                   src={work.img2.desktop}
                   srcSet={buildSrcSet(work.img2.mobile, work.img2.desktop)}
                   sizes="(max-width: 768px) 672px, 1344px"
-                  alt="bed"
+                  alt="Sagaponack Box - bedroom interior"
                   className="w-full h-full object-cover"
                 />
               </ImageAnimation>

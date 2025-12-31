@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useLocation, useNavigationType } from "react-router";
 import Preloader from "~/components/Animations/PreloaderAnimation";
 import FeaturedWorks from "~/components/HomeSections/FeaturedWorks";
 import Hero from "~/components/HomeSections/Hero";
@@ -9,9 +10,25 @@ import FixedNav from "~/components/Utilities/FixedNav";
 import Footer from "~/components/Utilities/Footer";
 
 const HomePage = () => {
-  const [isloading, setIsLoading] = useState(true);
+  const location = useLocation();
 
-  useEffect(() => window.scrollTo(0, 0), []);
+  const [isLoading, setIsLoading] = useState(false);
+
+  useEffect(() => {
+    const hasSeenHomePreload = sessionStorage.getItem("home-preload-seen");
+
+    const internalHomeClick = location.state?.internalHomeClick === true;
+
+
+    //  Allow preload only for first entry OR intentional home click
+    if (internalHomeClick || !hasSeenHomePreload) {
+      setIsLoading(true);
+    }
+  }, [location.key]);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <>
@@ -47,7 +64,15 @@ const HomePage = () => {
         <FixedNav />
 
         {/* PRELOADER ON TOP */}
-        {isloading && <Preloader onComplete={() => setIsLoading(false)} />}
+        {isLoading && (
+          <Preloader
+            onComplete={() => {
+              sessionStorage.setItem("home-preload-seen", "true");
+              setIsLoading(false);
+              window.history.replaceState({}, "");
+            }}
+          />
+        )}
       </div>
     </>
   );

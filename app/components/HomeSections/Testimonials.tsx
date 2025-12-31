@@ -31,7 +31,7 @@ const Testimonials = () => {
               <ImageAnimation>
                 <img
                   src="/images/home/testimonial-image1.webp"
-                  alt="testimonial image1"
+                  alt="Chango enjoying the Garden Pavilion"
                   className="w-full h-full object-cover"
                 />
               </ImageAnimation>
@@ -45,7 +45,7 @@ const Testimonials = () => {
               <span className="text-gray order-3 max-md:order-4">(2020)</span>
               <Link
                 className=" order-4 max-md:order-2 flex gap-1.5 items-center textBigContainer group"
-                to={"#"}
+                to={`works/garden-pavilion`}
               >
                 <span>
                   <HoverTextAnimation text="View The Project" />
@@ -63,7 +63,9 @@ const Testimonials = () => {
           <div className="  flex flex-col gap-3 max-md:gap-2">
             <span className="text-gray body-s">{testimonials[0].name}</span>
             <ScrollTextAnimation>
-              <p className="text-black max-w-[870px] body-l">{testimonials[0].text}</p>
+              <p className="text-black max-w-[870px] body-l">
+                {testimonials[0].text}
+              </p>
             </ScrollTextAnimation>
             <div className="flex justify-end">
               <SmallLink text="Read More" to="#" />
@@ -81,7 +83,7 @@ const Testimonials = () => {
               <ImageAnimation>
                 <img
                   src="/images/home/testimonial-image2.webp"
-                  alt="testimonial image1"
+                  alt="Karen in the Zenith Pavilion"
                   className="w-full h-full object-cover"
                 />
               </ImageAnimation>

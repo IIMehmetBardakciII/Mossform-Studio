@@ -6,9 +6,8 @@ import {
 } from "@react-router/dev/routes";
 
 export default [
-  index("routes/home.tsx"),
-
   layout("./components/TransitionLayout.tsx", [
+    index("routes/home.tsx"),
     route("works", "routes/works.tsx"),
     route("works/:slug", "routes/work-detail.tsx"),
     route("process", "routes/our-process.tsx"),

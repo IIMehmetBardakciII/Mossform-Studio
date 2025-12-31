@@ -1,10 +1,10 @@
-import { Link, NavLink } from "react-router";
+import { Link, NavLink, useLocation } from "react-router";
 import Button from "./Button";
 import HoverTextAnimation from "../Animations/HoverTextAnimation";
 import HamburgerMenu from "./HamburgerMenu";
 
 type NavbarProps = {
-  btnVariation:"var1"|"var2"|"var3"|"var4",
+  btnVariation: "var1" | "var2" | "var3" | "var4";
   variation: "var1" | "var2" | "var3";
 };
 
@@ -36,11 +36,16 @@ const getLinkClass = (
     return "text-linegray";
   if (variation === "var2" && isActive) return "text-white";
 };
-const Navbar = ({ variation,btnVariation }: NavbarProps) => {
+const Navbar = ({ variation, btnVariation }: NavbarProps) => {
+  const location = useLocation();
   return (
     <nav className={`pt-6 flex w-full relative z-40 ${styles[variation]}`}>
       <div className="container flex justify-between items-center">
-        <Link to={"/"} className="display-m ">
+        <Link
+          to={"/"}
+          className="display-m "
+          state={{ internalHomeClick: location.pathname === "/" }}
+        >
           Mossform
         </Link>
         <div className="md:flex hidden items-center lg:gap-[220px] md:gap-[65px]    ">
