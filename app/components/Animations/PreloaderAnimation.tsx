@@ -115,18 +115,18 @@ const Preloader = ({ onComplete }: { onComplete: () => void }) => {
         duration: 0.01,
       });
 
-      // //   Stone animation reveal
-      // animateStone(tl);
-      // //   Leaf animation reveal
+      //   Stone animation reveal
+      animateStone(tl);
+      //   Leaf animation reveal
 
-      // animateLeaf(tl);
+      animateLeaf(tl);
 
       //   Stone & Leaf scale animaiton
-      // tl.to(stoneandleafWrapper.current, {
-      //   scale: 0.5,
-      //   duration: 0.7,
-      //   ease: "power2.inOut",
-      // });
+      tl.to(stoneandleafWrapper.current, {
+        scale: 0.5,
+        duration: 0.7,
+        ease: "power2.inOut",
+      });
 
       //   Texts animation
 
