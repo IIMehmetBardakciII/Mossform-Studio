@@ -1,7 +1,18 @@
 import { Link } from "react-router";
 import HoverTextAnimation from "~/components/Animations/HoverTextAnimation";
 import Button from "~/components/Utilities/Button";
+import type { Route } from "../+types/root";
 
+export const meta: Route.MetaFunction = () => [
+  {
+    title: "404 — Page Not Found | Mossform Architecture",
+  },
+  {
+    name: "description",
+    content:
+      "The page you are looking for could not be found. Explore Mossform Architecture's works or return to the homepage.",
+  },
+];
 const Page404 = () => {
   return (
     <div className="h-dvh w-full container pt-6">

@@ -5,10 +5,31 @@ import { useRef, useState } from "react";
 import { Link } from "react-router";
 import Navbar from "~/components/Utilities/Navbar";
 import { projects } from "~/constant";
+import type { Route } from "../+types/root";
 gsap.registerPlugin(ScrollTrigger, Draggable);
-const ImageContainer = ({ src,alt }: { src: string; alt:string; }) => {
+const ImageContainer = ({ src, alt }: { src: string; alt: string }) => {
   return <img src={src} alt={alt} className="w-full object-cover h-full" />;
 };
+
+export const meta: Route.MetaFunction = () => [
+  {
+    title: "Mossform Architecture | Our Works",
+  },
+  {
+    name: "description",
+    content:
+      "Explore selected architectural works by Mossform Architecture, featuring calm, modern, and nature-driven projects shaped by biophilic and sustainable design principles.",
+  },
+  {
+    property: "og:title",
+    content: "Mossform Architecture | Our Works",
+  },
+  {
+    property: "og:description",
+    content:
+      "A curated portfolio of calm, modern, and nature-driven architectural projects by Mossform Architecture.",
+  },
+];
 const WorksPage = () => {
   const [currentProject, setCurrentProject] = useState<number>(0);
   const scrollControll = useRef<HTMLDivElement | null>(null);
@@ -110,24 +131,6 @@ const WorksPage = () => {
   );
 
   return (
-    <>
-      {/* Seo */}
-      <title>Mossform Architecture | Our Works</title>
-      <meta
-        name="description"
-        content="Explore selected architectural works by Mossform Architecture, featuring calm, modern, and nature-driven projects shaped by biophilic and sustainable design principles."
-      />
-      <meta
-        property="og:title"
-        content="Mossform Architecture | Our Works"
-      />
-
-      <meta
-        property="og:description"
-        content="A curated portfolio of calm, modern, and nature-driven architectural projects by Mossform Architecture."
-      />
-
-      {/* Content */}
       <main ref={containerRef} className="w-full h-dvh relative  bg-black ">
         <Navbar btnVariation="var2" variation="var2" />
         {/* Projects */}
@@ -145,7 +148,10 @@ const WorksPage = () => {
         ${currentProject === index ? "md:aspect-300/400 md:max-h-[400px]   opacity-100 hover:opacity-80  hover:border hover:border-white" : "md:aspect-300/360 md:max-h-[360px]  opacity-50"}
         `}
               >
-                <ImageContainer src={project.home} alt={`${project.name} architectural project by Mossform Architecture`} />
+                <ImageContainer
+                  src={project.home}
+                  alt={`${project.name} architectural project by Mossform Architecture`}
+                />
               </Link>
             ))}
           </div>
@@ -183,7 +189,6 @@ const WorksPage = () => {
           </div>
         </div>
       </main>
-    </>
   );
 };
 

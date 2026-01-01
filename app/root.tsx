@@ -29,6 +29,71 @@ export const links: Route.LinksFunction = () => [
   },
 ];
 
+export const meta: Route.MetaFunction = () => [
+  // Basic SEO
+  {
+    title: "Mossform Architecture | Contemporary & Nature-Driven Architecture",
+  },
+  {
+    name: "description",
+    content:
+      "Mossform Architecture is a contemporary architecture studio focused on calm, sustainable, and nature-driven spaces rooted in biophilic design principles."
+  },
+
+  // Open Graph (Facebook, LinkedIn, WhatsApp)
+  {
+    property: "og:type",
+    content: "website"
+  },
+  {
+    property: "og:site_name",
+    content: "Mossform Architecture"
+  },
+  {
+    property: "og:title",
+    content:
+      "Mossform Architecture | Contemporary & Nature-Driven Architecture"
+  },
+  {
+    property: "og:description",
+    content:
+      "Calm, modern, and nature-driven architecture shaped by biophilic and sustainable design principles."
+  },
+  {
+    property: "og:image",
+    content: "/images/og-cover.jpg"
+  },
+  {
+    property: "og:image:width",
+    content: "1200"
+  },
+  {
+    property: "og:image:height",
+    content: "630"
+  },
+
+  // Twitter
+  {
+    name: "twitter:card",
+    content: "summary_large_image"
+  },
+  {
+    name: "twitter:title",
+    content:
+      "Mossform Architecture | Contemporary & Nature-Driven Architecture"
+  },
+  {
+    name: "twitter:description",
+    content:
+      "Contemporary architecture studio creating calm, sustainable, and nature-connected spaces."
+  },
+  {
+    name: "twitter:image",
+    content: "/images/og-cover.jpg"
+  },
+];
+
+
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">

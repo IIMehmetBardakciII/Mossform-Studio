@@ -8,7 +8,28 @@ import OurProcess from "~/components/HomeSections/OurProcess";
 import Testimonials from "~/components/HomeSections/Testimonials";
 import FixedNav from "~/components/Utilities/FixedNav";
 import Footer from "~/components/Utilities/Footer";
+import type { Route } from "../+types/root";
 
+export const meta: Route.MetaFunction = () => [
+  {
+    title: "Mossform Architecture | Contemporary & Nature-Driven Architecture",
+  },
+  {
+    name: "description",
+    content:
+      "Mossform Architecture Studio brings people closer to nature through sustainable, biophilic architecture, creating calm and modern spaces for intentional living.",
+  },
+  {
+    property: "og:title",
+    content:
+      "Mossform Architecture | Contemporary & Nature-Driven Architecture",
+  },
+  {
+    property: "og:description",
+    content:
+      "Bringing people closer to nature through sustainable, biophilic architecture and calm, modern spaces.",
+  },
+];
 const HomePage = () => {
   const location = useLocation();
 
@@ -30,52 +51,28 @@ const HomePage = () => {
   }, []);
 
   return (
-    <>
-      {/* SEO* Start */}
-      <title>
-        Mossform Architecture | Contemporary & Nature-Driven Architecture
-      </title>
+    <div className="relative w-full h-full">
+      <main>
+        <Hero />
+        <Intro />
+        <FeaturedWorks />
+        <OurProcess />
+        <Testimonials />
+      </main>
+      <Footer />
+      <FixedNav />
 
-      <meta
-        name="description"
-        content="Mossform Architecture Studio brings people closer to nature through sustainable, biophilic architecture, creating calm and modern spaces for intentional living."
-      />
-
-      <meta
-        property="og:title"
-        content="Mossform Architecture | Contemporary & Nature-Driven Architecture"
-      />
-      <meta
-        property="og:description"
-        content="Bringing people closer to nature through sustainable, biophilic architecture and calm, modern spaces."
-      />
-      {/* SEO END! */}
-
-      {/* PAGE CONTENT (always mounted) */}
-
-      <div className="relative w-full h-full">
-        <main>
-          <Hero />
-          <Intro />
-          <FeaturedWorks />
-          <OurProcess />
-          <Testimonials />
-        </main>
-        <Footer />
-        <FixedNav />
-
-        {/* PRELOADER ON TOP */}
-        {isLoading && (
-          <Preloader
-            onComplete={() => {
-              sessionStorage.setItem("home-preload-seen", "true");
-              setIsLoading(false);
-              window.history.replaceState({}, "");
-            }}
-          />
-        )}
-      </div>
-    </>
+      {/* PRELOADER ON TOP */}
+      {isLoading && (
+        <Preloader
+          onComplete={() => {
+            sessionStorage.setItem("home-preload-seen", "true");
+            setIsLoading(false);
+            window.history.replaceState({}, "");
+          }}
+        />
+      )}
+    </div>
   );
 };
 
