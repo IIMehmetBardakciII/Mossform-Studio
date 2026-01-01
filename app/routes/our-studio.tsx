@@ -27,12 +27,12 @@ const OurStudioPage = () => {
       {/* Content */}
       <div>
         <Navbar variation="var3" btnVariation="var4" />
-        <div className="container">
+        <main className="container">
           <Hero />
           <Ideology />
           <Team />
           <Award />
-        </div>
+        </main>
         <Footer />
       </div>
     </>

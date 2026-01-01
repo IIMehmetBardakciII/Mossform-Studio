@@ -54,11 +54,13 @@ const HomePage = () => {
       {/* PAGE CONTENT (always mounted) */}
 
       <div className="relative w-full h-full">
-        <Hero />
-        <Intro />
-        <FeaturedWorks />
-        <OurProcess />
-        <Testimonials />
+        <main>
+          <Hero />
+          <Intro />
+          <FeaturedWorks />
+          <OurProcess />
+          <Testimonials />
+        </main>
         <Footer />
         <FixedNav />
 

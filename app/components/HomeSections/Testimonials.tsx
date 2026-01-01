@@ -95,7 +95,7 @@ const Testimonials = () => {
               <span className="text-gray order-3 max-md:order-4">(2024)</span>
               <Link
                 className=" order-4 max-md:order-2 flex gap-1.5 items-center textBigContainer group"
-                to={"#"}
+                to={`works/zenith-pavilion`}
               >
                 <span>
                   <HoverTextAnimation text="View The Project" />

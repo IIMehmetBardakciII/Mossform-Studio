@@ -6,8 +6,8 @@ import { Link } from "react-router";
 import Navbar from "~/components/Utilities/Navbar";
 import { projects } from "~/constant";
 gsap.registerPlugin(ScrollTrigger, Draggable);
-const ImageContainer = ({ src }: { src: string }) => {
-  return <img src={src} alt="project" className="w-full object-cover h-full" />;
+const ImageContainer = ({ src,alt }: { src: string; alt:string; }) => {
+  return <img src={src} alt={alt} className="w-full object-cover h-full" />;
 };
 const WorksPage = () => {
   const [currentProject, setCurrentProject] = useState<number>(0);
@@ -128,7 +128,7 @@ const WorksPage = () => {
       />
 
       {/* Content */}
-      <div ref={containerRef} className="w-full h-dvh relative  bg-black ">
+      <main ref={containerRef} className="w-full h-dvh relative  bg-black ">
         <Navbar btnVariation="var2" variation="var2" />
         {/* Projects */}
         <div className=" mt-5 max-md:mt-[105px] flex overflow-x-clip w-full md:h-[400px] h-[300px] ">
@@ -145,7 +145,7 @@ const WorksPage = () => {
         ${currentProject === index ? "md:aspect-300/400 md:max-h-[400px]   opacity-100 hover:opacity-80  hover:border hover:border-white" : "md:aspect-300/360 md:max-h-[360px]  opacity-50"}
         `}
               >
-                <ImageContainer src={project.home} />
+                <ImageContainer src={project.home} alt={`${project.name} architectural project by Mossform Architecture`} />
               </Link>
             ))}
           </div>
@@ -182,7 +182,7 @@ const WorksPage = () => {
             </div>
           </div>
         </div>
-      </div>
+      </main>
     </>
   );
 };

@@ -6,21 +6,22 @@ type GaleryProps = {
   project: Project;
 };
 
-
-
 const GaleryImageComponent = ({
   imageDesktop,
   imageMobile,
+  alt
 }: {
   imageDesktop: string;
   imageMobile?: string;
+    alt: string;
+
 }) => {
   return (
     <ImageAnimation>
       <img
         src={imageDesktop}
         loading="lazy"
-        alt="images"
+        alt={alt}
         className=" object-cover w-full h-full"
         srcSet={buildSrcSet(imageMobile, imageDesktop)}
         sizes="(max-width: 768px) 672px, 1344px"
@@ -30,13 +31,14 @@ const GaleryImageComponent = ({
 };
 const Galery = ({ project }: GaleryProps) => {
   return (
-    <div className=" container w-full h-full overflow-hidden md:mt-gapSectionDesktop mt-gapSectionMobile">
+    <section className=" container w-full h-full overflow-hidden md:mt-gapSectionDesktop mt-gapSectionMobile">
       <div className="flex max-md:flex-col max-md:gap-11 w-full gap-5">
         {/*Bath Image  */}
         <div className="flex-1 md:aspect-734/730 aspect-272/408 max-md:max-h-[408px]">
           <GaleryImageComponent
             imageDesktop={project.bath!}
             imageMobile={project.bath_mobile}
+            alt={`${project.name} bathroom interior`}
           />
         </div>
         {/*Corridor Image  */}
@@ -47,6 +49,8 @@ const Galery = ({ project }: GaleryProps) => {
           <GaleryImageComponent
             imageDesktop={project.corridor!}
             imageMobile={project.corridor_mobile}
+            alt={`${project.name} corridor interior`}
+
           />
         </div>
       </div>
@@ -55,19 +59,21 @@ const Galery = ({ project }: GaleryProps) => {
         <GaleryImageComponent
           imageDesktop={project.bed!}
           imageMobile={project.bed_mobile}
+            alt={`${project.name} bed interior`}
+
         />
       </div>
 
       {/* Testimonial */}
       <div className="h-dvh w-full  flex flex-col justify-center items-center my-gapSectionMobile">
-        <div className="max-w-[985px] flex flex-col gap-8">
-          <span className="body-s text-gray">
+          <blockquote className="max-w-[985px] flex flex-col gap-8">
+          <p className="body-s text-gray">
             {project.info.testimonials.name}
-          </span>
+          </p>
           <p className="body-base text-black whitespace-pre-line">
             {project.info.testimonials.opinion}
           </p>
-        </div>
+          </blockquote>
       </div>
       {/* Lounge & Kitchen Images */}
       <div className="flex gap-5 max-md:flex-col max-md:gap-11">
@@ -76,6 +82,8 @@ const Galery = ({ project }: GaleryProps) => {
           <GaleryImageComponent
             imageDesktop={project.lounge!}
             imageMobile={project.lounge_mobile}
+            alt={`${project.name} lounge interior`}
+
           />
         </div>
         {/* Kitchen Image */}
@@ -83,10 +91,12 @@ const Galery = ({ project }: GaleryProps) => {
           <GaleryImageComponent
             imageDesktop={project.kitchen!}
             imageMobile={project.kitchen_mobile}
+            alt={`${project.name} kitchen interior`}
+
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

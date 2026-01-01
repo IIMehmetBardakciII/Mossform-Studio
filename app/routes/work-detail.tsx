@@ -38,13 +38,13 @@ const WorkDetailPage = ({ params }: Route.ComponentProps) => {
       <meta property="og:type" content="article" />
 
       {/* Page Content */}
-      <div>
+      <main>
         <Hero project={project} />
         <Galery project={project} />
         <NextProject project={nextProject} />
-        <Footer />
-        <FixedNav />
-      </div>
+      </main>
+      <Footer />
+      <FixedNav />
     </>
   );
 };

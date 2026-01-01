@@ -4,7 +4,7 @@ import Navbar from "../Utilities/Navbar";
 const Hero = () => {
 
   return (
-    <div className="bg-black flex flex-col  relative w-full  h-dvh ">
+    <section className="bg-black flex flex-col  relative w-full  h-dvh ">
       <Navbar btnVariation="var1" variation="var1" />
 
       {/* Texts */}
@@ -47,7 +47,7 @@ const Hero = () => {
                   sizes="(max-width: 768px) 672px, 1344px"
         />
       </div>
-    </div>
+    </section>
   );
 };
 

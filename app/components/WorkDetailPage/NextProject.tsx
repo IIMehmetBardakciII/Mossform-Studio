@@ -8,13 +8,14 @@ type NextProject = {
 };
 const NextProject = ({ project }: NextProject) => {
   return (
-    <div className="min-h-screen w-full container flex flex-col gap-8 items-center justify-center md:py-gapSectionMobile py-14">
+    <section className="min-h-screen w-full container flex flex-col gap-8 items-center justify-center md:py-gapSectionMobile py-14">
       <span className="w-full h-px bg-linegray inline-block" />
       <Link
         to={`/works/${project.slug}`}
         className="flex items-center gap-2 body-s hover:underline"
       >
-        Go To Next Project <img src="/icons/arrowRight.svg" alt="arrow" />
+        Go To Next Project{" "}
+        <img src="/icons/arrowRight.svg" alt="" aria-hidden="true" />
       </Link>
       <h2 className="text-black display-xl capitalize max-md:text-center">
         {project.name}
@@ -27,13 +28,13 @@ const NextProject = ({ project }: NextProject) => {
               sizes="(max-width: 768px) 672px, 1344px"
               loading="lazy"
               src={project.home}
-              alt=""
+              alt={`${project.name} architectural project by Mossform Architecture`}
               className="w-full h-full object-cover"
             />
           </div>
         </ImageAnimation>
       </Link>
-    </div>
+    </section>
   );
 };
 

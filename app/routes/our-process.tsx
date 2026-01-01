@@ -1,12 +1,11 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { ScrollTrigger, SplitText } from "gsap/all";
-import { useRef, useState } from "react";
-import PageTransition from "~/components/Animations/PageTransition";
+import { ScrollTrigger } from "gsap/all";
+import { useRef } from "react";
 import OurApproach from "~/components/OurProcessPage/OurApproach";
 import Footer from "~/components/Utilities/Footer";
 import Navbar from "~/components/Utilities/Navbar";
-gsap.registerPlugin(ScrollTrigger, SplitText);
+gsap.registerPlugin(ScrollTrigger);
 const steps = [
   {
     id: "01",
@@ -117,7 +116,7 @@ const ProcessStep = ({ step }: ProcessStepType) => {
     return () => mm.revert();
   },{scope:stepRef});
   return (
-    <div
+    <article
       ref={stepRef}
       className="flex max-md:flex-col-reverse max-md:mt-6  md:h-dvh h-full items-center  "
     >
@@ -141,7 +140,7 @@ const ProcessStep = ({ step }: ProcessStepType) => {
           className="w-full h-full object-cover "
         />
       </div>
-    </div>
+    </article>
   );
 };
 
@@ -167,9 +166,9 @@ const OurProcessPage = () => {
       />
 
       {/* Content */}
-      <section  className="w-full relative h-full bg-white">
+      <main  className="w-full relative h-full bg-white">
         <Navbar btnVariation="var4" variation="var3" />
-        <div className="container relative mt-14 max-md:mt-10">
+        <section className="container relative mt-14 max-md:mt-10">
           <div className="md:absolute md:top-0 relative  w-fit z-50">
             <h1 className="display-xl text-black">Our Process</h1>
             <span className="text-gray body-base absolute -top-4 -right-10">
@@ -183,12 +182,12 @@ const OurProcessPage = () => {
               <ProcessStep key={step.id} step={step} />
             ))}
           </div>
-        </div>
+        </section>
 
         <OurApproach />
 
         <Footer />
-      </section>
+      </main>
     </>
   );
 };

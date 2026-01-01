@@ -7,7 +7,7 @@ type HeroProps = {
 };
 const Hero = ({ project }: HeroProps) => {
   return (
-    <div className=" relative isolate w-full  h-dvh ">
+    <section className=" relative isolate w-full  h-dvh ">
       <Navbar btnVariation="var1" variation="var1" />
 
       {/* Info */}
@@ -60,7 +60,8 @@ const Hero = ({ project }: HeroProps) => {
             Scroll to explore
             <img
               src="/icons/arrowDown.svg"
-              alt="arrowDown"
+              alt=""
+              aria-hidden="true"
               className="w-2.5 animate-bounce"
             />
           </span>
@@ -74,13 +75,13 @@ const Hero = ({ project }: HeroProps) => {
           loading="eager"
           fetchPriority="high"
           src={project.home}
-          alt="the-garden-pavilion"
+          alt={`${project.name} architectural project by Mossform Architecture in ${project.info.location}`}
           className="object-cover w-full h-full"
           srcSet={buildSrcSet(project.home_mobile, project.home)}
           sizes="(max-width: 768px) 672px, 1344px"
         />
       </div>
-    </div>
+    </section>
   );
 };
 

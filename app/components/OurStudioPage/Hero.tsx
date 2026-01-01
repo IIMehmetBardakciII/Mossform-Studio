@@ -1,10 +1,10 @@
 const Hero = () => {
   return (
-    <div className="w-full  md:mt-14 mt-[60px] h-dvh">
+    <section className="w-full  md:mt-14 mt-[60px] h-dvh">
       {/* Hero Image */}
       <img
         src="/images/our-studio/studio.webp"
-        alt="studio image"
+        alt="Mossform Architecture studio interior with natural materials and calm atmosphere"
         srcSet="/images/our-studio/studio-mobile.webp 1344w, /images/our-studio/studio.webp 2688w"
         sizes="(max-width: 768px) 672px, 1344px"
         className="w-full h-[350px] object-cover"
@@ -22,7 +22,7 @@ const Hero = () => {
           should enrich daily life with clarity and quiet beauty.
         </p>
       </div>
-    </div>
+    </section>
   );
 };
 

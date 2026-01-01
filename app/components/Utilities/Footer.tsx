@@ -8,24 +8,30 @@ import { ScrollTrigger } from "gsap/all";
 
 gsap.registerPlugin(ScrollTrigger);
 const Footer = () => {
-  const footerIntoRef=useRef<HTMLDivElement|null>(null);
-  useGSAP(()=>{
-    if(!footerIntoRef.current) return;
-    gsap.from(footerIntoRef.current,{
-      opacity:0,
-      scrollTrigger:{
-        trigger:footerIntoRef.current,
-        start:"top 50%",
-        end:"bottom bottom",
-        scrub:1,
-      }
-    })
-  },{scope:footerIntoRef})
+  const footerIntoRef = useRef<HTMLDivElement | null>(null);
+  useGSAP(
+    () => {
+      if (!footerIntoRef.current) return;
+      gsap.from(footerIntoRef.current, {
+        opacity: 0,
+        scrollTrigger: {
+          trigger: footerIntoRef.current,
+          start: "top 50%",
+          end: "bottom bottom",
+          scrub: 1,
+        },
+      });
+    },
+    { scope: footerIntoRef }
+  );
   return (
     <footer className="container min-h-screen mt-10 max-md:mt-14 pb-6 ">
       <span className="block w-full h-px bg-linegray" />
       {/* Footer Intro */}
-      <div ref={footerIntoRef} className="w-full h-dvh flex items-center justify-center flex-col md:gap-10 gap-4">
+      <div
+        ref={footerIntoRef}
+        className="w-full h-dvh flex items-center justify-center flex-col md:gap-10 gap-4"
+      >
         <h2 className="max-w-[1200px] display-xl text-black text-center">
           Let’s Create Spaces That Breathe With Nature
         </h2>
@@ -39,44 +45,59 @@ const Footer = () => {
           {/* Navigations&Social&Info */}
           <div className="flex max-md:flex-col gap-6 ">
             <div className="flex gap-6 max-md:order-2">
-                {/* NavLinks */}
-            <div className="flex flex-col gap-2 max-md:order-2">
-              <span className="display-s">Navigation</span>
-              <Link className="body-l-bold textBigContainer" to={"#"}>
-                <HoverTextAnimation text="Homepage" />
-              </Link>
-              <Link className="body-l-bold textBigContainer" to={"/works"}>
-                <HoverTextAnimation text="Works" />
-              </Link>
-              <Link className="body-l-bold textBigContainer" to={"/ourprocess"}>
-                <HoverTextAnimation text="Process" />
-              </Link>
-              <Link className="body-l-bold textBigContainer" to={"/studio"}>
-                <HoverTextAnimation text="Studio" />
-              </Link>
-            </div>
-            {/* Social Links */}
-            <div className="flex flex-col gap-2 max-md:order-3">
-              <span className="display-s">Social</span>
-              <Link
-                className="body-l-bold textBigContainer"
-                to={"/mossform/instagram.com"}
+              {/* NavLinks */}
+              <nav
+                aria-label="Footer navigation"
+                className="flex flex-col gap-2 max-md:order-2"
               >
-                <HoverTextAnimation text="Instagram" />
-              </Link>
-              <Link
-                className="body-l-bold textBigContainer"
-                to={"/mossform/linkedin.com"}
+                <span className="display-s">Navigation</span>
+                <Link className="body-l-bold textBigContainer" to={"/"}>
+                  <HoverTextAnimation text="Homepage" />
+                </Link>
+                <Link className="body-l-bold textBigContainer" to={"/works"}>
+                  <HoverTextAnimation text="Works" />
+                </Link>
+                <Link
+                  className="body-l-bold textBigContainer"
+                  to={"/ourprocess"}
+                >
+                  <HoverTextAnimation text="Process" />
+                </Link>
+                <Link className="body-l-bold textBigContainer" to={"/studio"}>
+                  <HoverTextAnimation text="Studio" />
+                </Link>
+              </nav>
+              {/* Social Links */}
+              <nav
+                aria-label="Social links"
+                className="flex flex-col gap-2 max-md:order-3"
               >
-                <HoverTextAnimation text="Linkedin" />
-              </Link>
-              <Link
-                className="body-l-bold textBigContainer"
-                to={"/mossform/x.com"}
-              >
-                <HoverTextAnimation text="X" />
-              </Link>
-            </div>
+                <span className="display-s">Social</span>
+                <a
+                  className="body-l-bold textBigContainer"
+                  href={"/mossform/instagram.com"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <HoverTextAnimation text="Instagram" />
+                </a>
+                <a
+                  className="body-l-bold textBigContainer"
+                  href={"/mossform/linkedin.com"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <HoverTextAnimation text="Linkedin" />
+                </a>
+                <a
+                  className="body-l-bold textBigContainer"
+                  href={"/mossform/x.com"}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <HoverTextAnimation text="X" />
+                </a>
+              </nav>
             </div>
             {/* Info */}
             <div className="flex flex-col gap-2 max-md:order-1">
@@ -115,23 +136,37 @@ const Footer = () => {
         </div>
         {/* Right Side */}
         <div className="flex-1 max-md:mt-4">
-            <div className="md:aspect-483/582 aspect-272/145 max-h-[582px] min-w-[272px]">
-              <img
-                src="/images/thumbnailHome.webp"
-                alt="image"
-                className="w-full h-full object-cover"
-              />
-            </div>
+          <div className="md:aspect-483/582 aspect-272/145 max-h-[582px] min-w-[272px]">
+            <img
+              src="/images/thumbnailHome.webp"
+              alt="Mossform Architecture studio atmosphere and material aesthetic"
+              className="w-full h-full object-cover"
+            />
+          </div>
         </div>
       </div>
       {/* Small Details */}
       <div className="mt-14 max-md:mt-2 flex justify-between max-md:gap-2 max-md:flex-col">
         <div className="flex items-center gap-12 max-md:gap-2 max-md:flex-col max-md:items-start">
-          <span className="body-s max-md:font-semibold max-md:order-3 textBigContainer">© 2025 Mossform Architecture</span>
-          <span className="body-s max-md:font-semibold textBigContainer"><Link to={"#"}><HoverTextAnimation text="Privacy Policy"/></Link></span>
-          <span className="body-s max-md:font-semibold textBigContainer"><Link to={"#"}><HoverTextAnimation text="Terms Of Service"/></Link></span>
+          <span className="body-s max-md:font-semibold max-md:order-3 textBigContainer">
+            © 2025 Mossform Architecture
+          </span>
+          <span className="body-s max-md:font-semibold textBigContainer">
+            <Link to={"#"}>
+              <HoverTextAnimation text="Privacy Policy" />
+            </Link>
+          </span>
+          <span className="body-s max-md:font-semibold textBigContainer">
+            <Link to={"#"}>
+              <HoverTextAnimation text="Terms Of Service" />
+            </Link>
+          </span>
         </div>
-          <span className="body-s max-md:font-semibold textBigContainer"><Link to={"#"}><HoverTextAnimation text="Site By Mehmet Bardakci"/></Link></span>
+        <span className="body-s max-md:font-semibold textBigContainer">
+          <Link to={"#"}>
+            <HoverTextAnimation text="Site By Mehmet Bardakci" />
+          </Link>
+        </span>
       </div>
     </footer>
   );

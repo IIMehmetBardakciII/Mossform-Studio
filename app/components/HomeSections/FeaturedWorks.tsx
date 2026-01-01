@@ -103,7 +103,8 @@ const FeaturedWorks = () => {
                     <img
                       loading="lazy"
                       src="/icons/arrowRight.svg"
-                      alt="arrow"
+                      alt=""
+                      aria-hidden="true"
                       className="w-2.5 group-hover:scale-75 transition-transform duration-600  cubic-bezier(0.25, 1, 0.5, 1)"
                     />
                   </Link>
