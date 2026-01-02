@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useLocation, useNavigationType } from "react-router";
+import { useLocation} from "react-router";
 import Preloader from "~/components/Animations/PreloaderAnimation";
 import FeaturedWorks from "~/components/HomeSections/FeaturedWorks";
 import Hero from "~/components/HomeSections/Hero";
