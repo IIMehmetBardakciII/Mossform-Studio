@@ -1,5 +1,5 @@
 import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
+import gsap from "~/utility/gsapClient";
 import { useRef, useState } from "react";
 import { team } from "~/constant";
 import type { MemberType } from "~/types/project";

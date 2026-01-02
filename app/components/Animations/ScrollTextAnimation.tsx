@@ -1,9 +1,9 @@
 import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { ScrollTrigger, SplitText } from "gsap/all";
 import { useRef } from "react";
 
-gsap.registerPlugin(ScrollTrigger, SplitText);
+import gsap, { SplitText } from "~/utility/gsapClient";
+
+
 const ScrollTextAnimation = ({ children }: { children: React.ReactNode }) => {
   const textRef = useRef<HTMLDivElement | null>(null);
 

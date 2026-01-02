@@ -1,8 +1,6 @@
 import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
 import { useRef } from "react";
-gsap.registerPlugin(ScrollTrigger);
+import gsap,{ScrollTrigger} from "~/utility/gsapClient";
 
 type ProcessStepType = {
   step: {

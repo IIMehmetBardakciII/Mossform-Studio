@@ -1,15 +1,12 @@
 import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
 import { useRef, useState } from "react";
 import { Link } from "react-router";
 import Navbar from "~/components/Utilities/Navbar";
 import { projects } from "~/constant";
 import type { Route } from "../+types/root";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Draggable from "gsap/dist/Draggable";
-if (typeof window !== 'undefined') {
-  gsap.registerPlugin(ScrollTrigger, Draggable);
-}
+
+import gsap, { ScrollTrigger,Draggable } from "~/utility/gsapClient";
+
 const ImageContainer = ({ src, alt }: { src: string; alt: string }) => {
   return <img src={src} alt={alt} className="w-full object-cover h-full" />;
 };

@@ -3,10 +3,8 @@ import Button from "./Button";
 import HoverTextAnimation from "../Animations/HoverTextAnimation";
 import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
+import gsap from "~/utility/gsapClient";
 
-gsap.registerPlugin(ScrollTrigger);
 const Footer = () => {
   const footerIntoRef = useRef<HTMLDivElement | null>(null);
   useGSAP(

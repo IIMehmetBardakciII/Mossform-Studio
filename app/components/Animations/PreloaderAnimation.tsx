@@ -1,11 +1,6 @@
 import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import {SplitText } from "gsap/all";
-import MotionPathPlugin from "gsap/MotionPathPlugin";
 import { useRef } from "react";
-if (typeof window !== "undefined") {
-  gsap.registerPlugin(MotionPathPlugin, SplitText);
-}
+import gsap, { SplitText } from "~/utility/gsapClient";
 
 const Preloader = ({ onComplete }: { onComplete: () => void }) => {
   const stoneRef = useRef<HTMLImageElement | null>(null);

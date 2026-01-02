@@ -1,12 +1,11 @@
 import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
 import { useRef, useState } from "react";
 import Button from "./Button";
 import OverlayMenu from "./OverlayMenu";
 import ContactUsForm from "./ContactUsForm";
+import gsap, { ScrollTrigger } from "~/utility/gsapClient";
 
-gsap.registerPlugin(ScrollTrigger);
+
 const FixedNav = () => {
   const menuRef = useRef<HTMLDivElement | null>(null);
   useGSAP(

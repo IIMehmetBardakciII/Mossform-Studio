@@ -1,9 +1,8 @@
 import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
 import { useRef } from "react";
 
-gsap.registerPlugin(ScrollTrigger);
+import gsap from "~/utility/gsapClient";
+
 const ImageAnimation = ({ children }: { children: React.ReactNode }) => {
   const imageRef = useRef<HTMLDivElement | null>(null);
   useGSAP(

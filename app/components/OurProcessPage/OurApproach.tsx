@@ -1,9 +1,8 @@
 import { useGSAP } from "@gsap/react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/all";
 import { useRef } from "react";
 
-gsap.registerPlugin(ScrollTrigger);
+import gsap from "~/utility/gsapClient";
+
 const OurApproach = () => {
   const sectionRef = useRef<HTMLDivElement | null>(null);
   const imageWrapRef = useRef<HTMLDivElement | null>(null);
