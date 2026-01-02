@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/all";
 import { useRef, useState } from "react";
 import Button from "./Button";
 import OverlayMenu from "./OverlayMenu";
+import ContactUsForm from "./ContactUsForm";
 
 gsap.registerPlugin(ScrollTrigger);
 const FixedNav = () => {
@@ -38,6 +39,7 @@ const FixedNav = () => {
   );
 
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [isFormOpen, setIsFormOpen] = useState<boolean>(false);
 
   return (
     <>
@@ -46,7 +48,7 @@ const FixedNav = () => {
         ref={menuRef}
       >
         <div className=" flex gap-4 w-full justify-end">
-          <div className="max-md:hidden">
+          <div onClick={()=>setIsFormOpen(true)} className="max-md:hidden">
             <Button hasCircle text="Contact Us" variant="var1" />
           </div>
           <div onClick={() => setIsOpen(true)}>
@@ -55,6 +57,7 @@ const FixedNav = () => {
         </div>
       </div>
       <OverlayMenu isOpen={isOpen} setIsOpen={setIsOpen} />
+      <ContactUsForm isOpen={isFormOpen} setIsOpen={setIsFormOpen} />
     </>
   );
 };

@@ -14,7 +14,7 @@ const Hero = () => {
             Mossform <br />
             Architecture
           </h1>
-          <span className="display-xl text-white absolute -top-10 right-0">
+          <span className="display-xl text-white absolute -top-10 right-3">
             ®
           </span>
         </div>

@@ -2,6 +2,8 @@ import { Link, NavLink, useLocation } from "react-router";
 import Button from "./Button";
 import HoverTextAnimation from "../Animations/HoverTextAnimation";
 import HamburgerMenu from "./HamburgerMenu";
+import { useState } from "react";
+import ContactUsForm from "./ContactUsForm";
 
 type NavbarProps = {
   btnVariation: "var1" | "var2" | "var3" | "var4";
@@ -38,6 +40,7 @@ const getLinkClass = (
 };
 const Navbar = ({ variation, btnVariation }: NavbarProps) => {
   const location = useLocation();
+  const [isFormOpen, setIsFormOpen] = useState<boolean>(false);
   return (
     <nav className={`pt-6 flex w-full relative z-40 ${styles[variation]}`}>
       <div className="container flex justify-between items-center">
@@ -66,9 +69,11 @@ const Navbar = ({ variation, btnVariation }: NavbarProps) => {
             ))}
           </div>
           {/* Contact Us Btn */}
-          <div className="btn">
+          <div onClick={()=>setIsFormOpen(true)} className="btn">
             <Button hasCircle={true} variant={btnVariation} text="Contact Us" />
           </div>
+          {/* Contact Us Form */}
+            <ContactUsForm isOpen={isFormOpen} setIsOpen={setIsFormOpen} />
         </div>
       </div>
 
