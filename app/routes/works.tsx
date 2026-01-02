@@ -10,7 +10,6 @@ import Draggable from "gsap/dist/Draggable";
 if (typeof window !== 'undefined') {
   gsap.registerPlugin(ScrollTrigger, Draggable);
 }
-gsap.registerPlugin(ScrollTrigger, Draggable);
 const ImageContainer = ({ src, alt }: { src: string; alt: string }) => {
   return <img src={src} alt={alt} className="w-full object-cover h-full" />;
 };
