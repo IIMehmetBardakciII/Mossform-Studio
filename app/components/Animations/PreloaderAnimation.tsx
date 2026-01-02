@@ -1,6 +1,7 @@
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { MotionPathPlugin, SplitText } from "gsap/all";
+import {SplitText } from "gsap/all";
+import MotionPathPlugin from "gsap/MotionPathPlugin";
 import { useRef } from "react";
 if (typeof window !== "undefined") {
   gsap.registerPlugin(MotionPathPlugin, SplitText);
