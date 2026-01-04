@@ -4,7 +4,15 @@ import SmallLink from "../Utilities/SmallLink";
 
 const Intro = () => {
   return (
-    <section className="md:mt-gapSectionDesktop mt-gapSectionMobile container min-h-screen flex flex-col md:gap-[156px] gap-6">
+    <section
+      aria-labelledby="intro-title"
+      className="md:mt-gapSectionDesktop mt-gapSectionMobile container min-h-screen flex flex-col md:gap-[156px] gap-6"
+    >
+      {/* Screen Reader Header */}
+      <h2 className="sr-only" id="intro-title">
+        Reconnect With Nature
+      </h2>
+
       <div className="gap-first-pair">
         <div className="flex-2 md:aspect-482/368 aspect-272/208 max-w-[482px] ">
           <ImageAnimation>
@@ -17,7 +25,7 @@ const Intro = () => {
           </ImageAnimation>
         </div>
         <div className="flex flex-col gap-8 max-md:gap-2 flex-3 ">
-          <ScrollTextAnimation>
+          <ScrollTextAnimation ariaHidden>
             <h2 className="display-xl text-black">Reconnect With Nature</h2>
           </ScrollTextAnimation>
           <ScrollTextAnimation>

@@ -13,9 +13,12 @@ const OurProcessSteps = [
 ];
 const OurProcess = () => {
   return (
-    <section className="mt-gapSectionMobile md:mt-gapSectionDesktop container min-h-screen md:pb-[117px]   ">
+    <section aria-labelledby="our-process" className="mt-gapSectionMobile md:mt-gapSectionDesktop container min-h-screen md:pb-[117px]   ">
+      {/* Screen Reader Header */}
+      <h2 className="sr-only" id="our-process">Our Process</h2>
+
       <div>
-        <ScrollTextAnimation>
+        <ScrollTextAnimation ariaHidden>
           <h2 className="display-xl text-black">Our Process</h2>
         </ScrollTextAnimation>
       </div>
@@ -39,8 +42,10 @@ const OurProcess = () => {
             <div className="flex flex-col gap-2">
               {OurProcessSteps.map((step, index) => (
                 <span key={index} className="body-s text-black">
-                  <span className="text-gray tabular-nums">{String(index + 1).padStart(2,"0")}</span> —{" "}
-                  {step}
+                  <span className="text-gray tabular-nums">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>{" "}
+                  — {step}
                 </span>
               ))}
             </div>

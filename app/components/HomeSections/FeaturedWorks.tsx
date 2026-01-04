@@ -52,9 +52,15 @@ const works = [
 
 const FeaturedWorks = () => {
   return (
-    <section className=" relative mt-gapSectionMobile md:mt-gapSectionDesktop container min-h-screen pb-[45px] max-md:pb-3">
+    <section
+      aria-labelledby="featured-works-title"
+      className=" relative mt-gapSectionMobile md:mt-gapSectionDesktop container min-h-screen pb-[45px] max-md:pb-3"
+    >
       <div>
-        <ScrollTextAnimation>
+        <h2 id="featured-works-title" className="sr-only">
+          Featured Works (6 projects)
+        </h2>
+        <ScrollTextAnimation ariaHidden>
           <h2 className="display-xl text-black">
             Featured Works <span className="text-gray">(06)</span>
           </h2>

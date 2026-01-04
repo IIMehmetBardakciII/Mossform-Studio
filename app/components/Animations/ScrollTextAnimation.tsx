@@ -4,7 +4,7 @@ import { useRef } from "react";
 import gsap, { SplitText } from "~/utility/gsapClient";
 
 
-const ScrollTextAnimation = ({ children }: { children: React.ReactNode }) => {
+const ScrollTextAnimation = ({ children,ariaHidden=false }: { children: React.ReactNode; ariaHidden?:boolean }) => {
   const textRef = useRef<HTMLDivElement | null>(null);
 
   useGSAP(
@@ -38,7 +38,7 @@ const ScrollTextAnimation = ({ children }: { children: React.ReactNode }) => {
     },
     { scope: textRef }
   );
-  return <div ref={textRef}>{children}</div>;
+  return <div aria-hidden={ariaHidden} ref={textRef}>{children}</div>;
 };
 
 export default ScrollTextAnimation;

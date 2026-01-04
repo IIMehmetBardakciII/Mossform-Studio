@@ -15,9 +15,11 @@ const testimonials = [
 ];
 const Testimonials = () => {
   return (
-    <section className="mt-gapSectionMobile md:mt-gapSectionDesktop container min-h-screen pb-[45px] max-md:pb-3">
+    <section aria-labelledby="testimonial-title" className="mt-gapSectionMobile md:mt-gapSectionDesktop container min-h-screen pb-[45px] max-md:pb-3">
+          <h2 className="sr-only" id="testimonial-title">What Our Clients Say</h2>
+
       <div>
-        <ScrollTextAnimation>
+        <ScrollTextAnimation ariaHidden>
           <h2 className="display-xl text-black">What Our Clients Say</h2>
         </ScrollTextAnimation>
       </div>
