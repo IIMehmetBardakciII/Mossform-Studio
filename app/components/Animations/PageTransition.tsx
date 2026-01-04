@@ -1,5 +1,6 @@
 import { useRef, useState } from "react";
-import gsap from "gsap";
+import gsap from "~/utility/gsapClient";
+
 import { useGSAP } from "@gsap/react";
 
 const PageTransition = ({ children }: { children: React.ReactNode }) => {
