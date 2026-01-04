@@ -5,11 +5,12 @@ import OverlayMenu from "./OverlayMenu";
 import ContactUsForm from "./ContactUsForm";
 import gsap, { ScrollTrigger } from "~/utility/gsapClient";
 
-
 const FixedNav = () => {
   const menuRef = useRef<HTMLDivElement | null>(null);
   useGSAP(
     () => {
+      if (!menuRef.current) return;
+
       gsap.set(menuRef.current, {
         autoAlpha: 0,
         scale: 0.98,
@@ -47,7 +48,7 @@ const FixedNav = () => {
         ref={menuRef}
       >
         <div className=" flex gap-4 w-full justify-end">
-          <div onClick={()=>setIsFormOpen(true)} className="max-md:hidden">
+          <div onClick={() => setIsFormOpen(true)} className="max-md:hidden">
             <Button hasCircle text="Contact Us" variant="var1" />
           </div>
           <div onClick={() => setIsOpen(true)}>
