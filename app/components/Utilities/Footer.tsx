@@ -57,7 +57,7 @@ const Footer = () => {
                 </Link>
                 <Link
                   className="body-l-bold textBigContainer"
-                  to={"/ourprocess"}
+                  to={"/process"}
                 >
                   <HoverTextAnimation text="Process" />
                 </Link>
@@ -161,7 +161,7 @@ const Footer = () => {
           </span>
         </div>
         <span className="body-s max-md:font-semibold textBigContainer">
-          <Link to={"#"}>
+          <Link target="_blank" to={"https://www.behance.net/mehmetbardakci"}>
             <HoverTextAnimation text="Site By Mehmet Bardakci" />
           </Link>
         </span>

@@ -36,14 +36,14 @@ const Hero = () => {
 
       {/* Background image */}
       <div className="absolute bgImage w-full h-full">
-        <div className="w-full h-full bg-[#0B0B0B] opacity-20 absolute " />
+        <div className="w-full h-full bg-[#0B0B0B] opacity-10 absolute " />
         <img
         loading="eager"
         fetchPriority="high"
-          src="images/projects/the-garden-pavilion/home.webp"
+          src="images/projects/forest-canopy/home.webp"
           alt="the-garden-pavilion"
           className="object-cover w-full h-full"
-          srcSet="/images/projects/the-garden-pavilion/home-mobile.webp 1344w, /images/projects/the-garden-pavilion/home.webp 2688w"
+          srcSet="/images/projects/forest-canopy/home-mobile.webp 1344w, /images/projects/forest-canopy/home.webp 2688w"
                   sizes="(max-width: 768px) 672px, 1344px"
         />
       </div>

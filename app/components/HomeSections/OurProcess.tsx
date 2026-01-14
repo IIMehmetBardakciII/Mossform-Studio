@@ -52,7 +52,7 @@ const OurProcess = () => {
           </div>
           {/* Cta */}
           <Link
-            to={"/ourprocess"}
+            to={"/process"}
             className="max-md:absolute max-md:bottom-0 max-md:left-1/2 max-md:-translate-x-1/2 "
           >
             <Button hasCircle={false} text="More Details" variant="var1" />

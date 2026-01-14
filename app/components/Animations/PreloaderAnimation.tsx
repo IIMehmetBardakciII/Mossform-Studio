@@ -28,6 +28,10 @@ const Preloader = ({ onComplete }: { onComplete: () => void }) => {
         },
         duration: 3,
         ease: "sine.inOut",
+        onStart: () => {
+          const path = document.querySelector("#pathForLeaf") as SVGPathElement;
+          if (path) path.style.opacity = "1"; // make path visible for calculation
+        },
       },
       "-=1"
     );

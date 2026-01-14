@@ -24,7 +24,7 @@ const ImageAnimation = ({ children }: { children: React.ReactNode }) => {
               trigger: imageRef.current,
               start: "top 80%",
               end: "bottom 40%",
-              scrub: 1.5,
+              scrub: 1,
               invalidateOnRefresh: true,
             },
           });

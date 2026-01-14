@@ -70,7 +70,7 @@ const Testimonials = () => {
               </p>
             </ScrollTextAnimation>
             <div className="flex justify-end">
-              <SmallLink text="Read More" to="#" />
+              <SmallLink text="Read More" to={`works/garden-pavilion`}/>
             </div>
           </div>
         </div>
@@ -120,7 +120,7 @@ const Testimonials = () => {
               </p>
             </ScrollTextAnimation>
             <div className="flex max-md:justify-end">
-              <SmallLink text="Read More" to="#" />
+              <SmallLink text="Read More" to={`works/zenith-pavilion`} />
             </div>
           </div>
         </div>
